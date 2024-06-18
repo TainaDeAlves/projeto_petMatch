@@ -1,0 +1,1458 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+:root {
+    --primaria: #cd9cfa;
+    --segundaria: #FCC419;
+    --texto: #2f2f2f;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.barratopo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 85px;
+
+}
+
+#logo {
+    margin-top: -13px;
+}
+
+#menu ul {
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 70px;
+}
+
+#menu ul li {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 23px;
+    padding-top: 2px;
+}
+
+#menu ul li:hover {
+    background-image: url("../img/osso.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+
+}
+
+#menu ul li a {
+    color: var(--texto);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+
+}
+
+.paginainterna .lupa {
+    color: #2f2f2f !important;
+}
+
+.paginainterna #botao a {
+    color: #2f2f2f !important;
+}
+
+.imagemBanner {
+    background: url(../img/cabecalho.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 650px;
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 350px);
+}
+
+.mensagem-banner h1 {
+    color: var(--primaria);
+    padding-top: 90px;
+    padding-bottom: 20px;
+    font-size: 30px;
+
+}
+
+.mensagem-banner p {
+    color: var(--texto);
+    padding-top: 20px;
+    width: 500px;
+    font-size: 16px;
+
+}
+
+.botao-adotar {
+    background-color: var(--segundaria);
+    padding: 12px 12px;
+    border-radius: 18px;
+    position: absolute;
+    margin-top: 45px;
+    color: #ffff;
+    font-size: 16px;
+}
+
+.caixa-text {
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    opacity: 60%;
+    height: 20px;
+    width: 100%;
+    border: solid 2px #d9d9d9;
+
+}
+
+#botao a {
+    padding-left: 35px;
+    color: #ffff;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.lupa {
+    background: none;
+    border: none;
+    color: #ffff;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+#FormPesquisa {
+    margin-left: auto;
+}
+
+#FormPesquisa form {
+    display: flex;
+}
+
+.estastistica {
+    display: flex;
+    background-color: #A15BE2;
+    width: 650px;
+    height: 141px;
+    margin-top: -20px;
+    padding-left: 80px;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    background-image: url("../img/Patinhas.png");
+    background-repeat: no-repeat;
+    background-position: 35px 15px;
+
+}
+
+.numero {
+    padding: 55px;
+    color: #ffff;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.valor {
+    font-size: 35px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    margin-top: -15px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    padding-top: 95px;
+    padding-bottom: 105px;
+
+}
+
+.container span {
+    color: var(--primaria);
+    padding-left: 8px;
+}
+
+.passosadote {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+    background-image: url("../img/traco.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.blocochamada {
+    border: solid 1px #cc9cfa24;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 5px 3px 5px #cd9cfa;
+    background-color: #fff;
+    margin-top: 80px;
+    padding-left: 15px;
+    margin-left: 1px;
+    font-size: 14px;
+    width: 235px;
+    height: 210px;
+
+}
+
+.container h3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+    font-size: 25px;
+
+}
+
+#selecaoDeCachorros {
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+    font-size: 16px;
+}
+
+.bloco-pet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 95px;
+}
+
+.caramelo {
+    text-align: center;
+}
+
+.container3 {
+    display: flex;
+    margin: 150px;
+    padding: 150px;
+    padding-left: 150px;
+    margin-top: 20px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container4 {
+    text-align: center;
+    display: flex;
+    margin-left: -80%;
+    background-color: #cd9cfa73;
+    padding-left: 84%;
+    padding-top: 150px;
+    width: -20%;
+    margin-top: 10px;
+    box-shadow: #cd9cfa73;
+
+}
+
+
+.container4 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: -6%;
+    padding-left: 4%;
+    padding-right: 0%;
+}
+
+
+
+
+
+
+.bloco-depoimentos {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    margin-left: 0px;
+
+}
+
+.depoimento {
+    padding-left: 300px;
+    padding-top: -900px;
+    margin-top: -150px;
+    margin-left: -15%;
+}
+
+
+
+.depoimento1 {
+    margin-left: -10%;
+    padding-top: 160px;
+    padding: 30px;
+    padding-left: 240px;
+
+}
+
+.depoimentos2 {
+    margin-left: 45%;
+}
+
+
+
+
+
+
+.testimony1 {
+    padding: 100px;
+    margin-left: -115%;
+    margin-top: 5px;
+    width: 400px;
+    height: 550px;
+
+}
+
+.testimony2 {
+    padding: 100px;
+    margin-left: -118px;
+    height: 700;
+    width: 400px;
+    margin-top: 5px;
+}
+
+.testimony3 {
+    display: flex;
+    padding-top: 900px;
+    margin-top: -559px;
+    padding: 100px;
+    margin-left: 31%;
+    padding-top: -70px;
+    width: 400px;
+    height: 550px;
+}
+
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.se-inscreva {
+    display: flex;
+
+
+}
+
+
+
+.imagem {
+    margin-left: 100px;
+    margin-top: 75px;
+
+}
+
+
+.boletin {
+    margin-left: 650px;
+    margin-top: -400px;
+    font-size: 30px;
+    align-items: center;
+
+}
+
+.roxo {
+    color: #cd9cfa;
+}
+
+
+.ultimas {
+    margin-left: 650px;
+    font-size: 16px;
+}
+
+
+
+
+
+.pesquisa {
+
+    margin-top: 460px;
+    width: 499px;
+    height: 45px;
+    border-radius: 10px;
+    border: 3px solid #cd9cfa;
+    background: #fff;
+    margin-left: -360px;
+
+}
+
+
+
+
+.botao {
+    display: inline-block;
+    grid-column: 10px;
+    margin-left: -100%;
+    align-items: center;
+    padding-left: 1px;
+    margin-top: 315%;
+    background-color: #cd9cfa;
+    width: 146px;
+    height: 43px;
+    border: 0px 10px 10px 0px;
+    border-radius: 10px;
+    font-size: 16px;
+
+
+}
+
+
+.botao {
+    top: 50px;
+    left: 50px;
+
+
+}
+
+.botao {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.botao {
+    display: grid;
+}
+
+
+.botao {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+
+
+.caixa-mensagem {
+    display: flex;
+    width: 499px;
+    height: 45px;
+    margin-left: -480px;
+    padding-left: 580px;
+    padding: 300px;
+
+}
+
+
+
+.rodape {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    background-color: #A15BE2;
+    color: #fff;
+    height: 360px;
+    padding-top: 50px;
+    padding-right: 350px;
+
+}
+
+
+.imagem {
+    margin-left: -10%;
+    margin-top: 24.6px;
+    margin-bottom: 245px;
+}
+
+.imagem {
+    margin-left: -650px;
+}
+
+.imagem {
+    padding-left: 50%;
+}
+
+
+.logo a {
+    display: flex;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #fff
+}
+
+.logo img {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 450px;
+
+}
+
+.texto {
+    margin-left: -150px;
+}
+
+
+.img {
+    margin-left: 50px;
+
+}
+
+
+/*.redeSocial{
+    
+}*/
+
+
+
+.categorias {
+
+    margin-left: 25px;
+    display: block;
+}
+
+
+.categorias a {
+    margin-top: 10px;
+    display: block;
+    color: #fff;
+
+}
+
+.pet-match {
+    margin-left: 50px;
+
+
+}
+
+
+.pet-match a {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+
+
+}
+
+
+
+.Contatos {
+    margin-left: 30px;
+
+}
+
+.Contatos a {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+
+
+
+}
+
+
+.baixe-apps {
+    display: block;
+    margin-bottom: 1px;
+
+    margin-left: 50px;
+
+}
+
+
+
+.baixe-apps h4 {
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+
+/* css da pagina-contribuir */
+.bannerprincipal {
+    display: flex;
+}
+
+.mensagem {
+    text-align: center;
+    padding: 55px;
+    font-size: 25px;
+    margin-top: 75px;
+
+}
+
+.textoamarelo {
+    color: var(--segundaria) !important;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+}
+
+.botoes {
+    display: flex;
+    padding: 35px;
+    margin-top: 25px;
+    justify-content: space-evenly;
+}
+
+.botao3 a {
+    color: #fff;
+    background-color: var(--segundaria);
+    padding: 10px 10px;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.titulo2 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.doar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.imgnumero {
+    display: flex;
+    align-items: center;
+}
+
+.formascontribuir {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+.textindicativo{
+    text-align: center;
+    margin: 100px 0px;
+    
+
+}
+.textindicativo h2{
+    font-weight: 500;
+    font-size: clamp(25px, 3vw, 35px);
+}
+
+/* termino da da pagina contribuir */
+
+
+/*inicio da pagina cadastra-se*/
+
+.texto1 {
+    color: #A15BE2;
+    margin-left: 43%;
+    margin-bottom: 20px;
+
+}
+
+.cadastre-se {
+    background-color: #2f2f2f;
+    height: 530px;
+    padding-top: 30px;
+    height: 650px;
+}
+
+
+.cadastro {
+    margin-left: 5%;
+
+}
+
+
+.name {
+    display: block;
+    margin-left: 43%;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+
+.email {
+    display: block;
+    margin-left: 43%;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.city {
+    display: block;
+    margin-left: 43%;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+
+}
+
+
+.uf {
+    display: block;
+    margin-left: 43%;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+
+}
+
+
+.sen {
+    display: block;
+    margin-left: 43%;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+
+}
+
+
+
+.Confirme {
+    display: block;
+    margin-left: 43%;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+
+}
+
+
+
+.gin {
+    text-align: center;
+    background-color: #A15BE2;
+    display: block;
+    margin-left: 45.9%;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+    color: white;
+
+}
+
+.ONGS {
+
+    text-align: center;
+    background-color: #A15BE2;
+    color: white;
+    display: block;
+    margin-left: 45.9%;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+
+}
+
+
+
+
+
+
+
+
+
+/*login*/
+
+.cadastre-se1 {
+    background-color: #2f2f2f;
+    height: 300px;
+    padding-top: 12px;
+}
+
+
+.texto {
+    margin-left: 450px;
+}
+
+
+
+/*fim da pagina cadastra-se */
+
+/* ----inicio css da pagina contato----- */
+.textsugerirfaq {
+    margin-left: 55px;
+}
+
+.textfaq h2 {
+    color: var(--primaria);
+    font-size: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.textfaq p {
+    font-size: 20px;
+}
+
+.textfaq p span {
+    color: var(--segundaria);
+}
+
+.botaofaq {
+
+    background-color: var(--segundaria);
+    padding: 3px 20px;
+    border-radius: 18px;
+    position: absolute;
+    margin-top: 25px;
+
+    margin-left: 15px;
+}
+
+.botaofaq a {
+
+    color: #fff;
+    font-size: 18px;
+}
+
+.imgcontato {
+
+    margin-top: -180px;
+    background-image: url("../img/imgcontato.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 600px;
+
+
+}
+
+.textdobackground {
+    color: var(--segundaria);
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #fff;
+    position: absolute;
+    padding-left: 835px;
+    margin-top: -500px;
+}
+
+.contatoAtraves {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#meiosDeContato {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primaria);
+    padding: 35px 20px;
+    border-radius: 45px;
+    font-size: 17px;
+    color: #ffff;
+}
+
+.iconecontato {
+
+    padding: 0px 25px;
+}
+
+.formcontato {
+    background-image: linear-gradient(to bottom, #ffffff, #cc9cfadb);
+
+    padding-bottom: 35px;
+
+}
+
+.formcontato input {
+    font-size: 22px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 400px;
+    border: var(--primaria) 3px solid;
+    border-radius: 25px;
+}
+
+.textformcontato h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 1px #ffffff;
+    padding-top: 65px;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--segundaria);
+}
+
+.formMensagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 65px;
+
+}
+
+.botaoenviarform {
+    display: flex;
+    justify-content: center;
+
+}
+
+.botaoenviarform input {
+    font-size: 16px;
+    color: #fff;
+    background-color: #FCC419;
+    border: var(--segundaria) 3px solid;
+
+}
+
+/* ---- final do css da pagina contato----- */
+
+
+
+/*politica de privacidade*/
+
+
+.titulo2 {
+    color: #2f2f2f;
+}
+
+.politica {
+    color: #8107f3;
+    font-size: 20px;
+}
+
+
+.email {
+    font-size: 20px;
+    color: #8107f3;
+    text-decoration: overline solid black;
+}
+
+/* finnal politica de privacidade*/
+
+/*  inicio css pagina de adote */
+
+#containeradotar {
+    max-width: 1000px;
+}
+
+.container h2 {
+    margin: 45px 0px;
+}
+
+#buscarpet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 90%;
+    border-radius: 20px;
+    background-color: #cc9cfa40;
+    box-shadow: inset 0px 5px 10px 1px #cc9cfa84;
+}
+
+.formpet {
+    width: 100%;
+}
+
+.formpet button {
+    margin-top: 20px;
+    background-color: #CD9CFA;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 35px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.teste {
+    margin-bottom: 35px;
+}
+
+.informacoepet {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.localidadepet {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.formpet select {
+    width: 165%;
+    height: 35px;
+    font-size: 16px;
+    border: solid 1px var(--primaria);
+    border-radius: 10px;
+    outline: none;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dadospet {
+    flex-grow: 1;
+    margin-top: 45px;
+    border: solid 3px var(--primaria);
+    border-radius: 20px;
+    width: 226px;
+    height: 370px;
+    color: #2f2f2f;
+}
+
+.fundoroxo {
+    background-color: var(--primaria);
+    border-radius: 16px 16px 50px 50px;
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.fotopet {
+    display: flex;
+    width: 220px;
+    justify-content: center;
+}
+
+.fotopet img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 15px;
+    border: solid 2px var(--primaria);
+}
+
+.coracao {
+    display: flex;
+    justify-content: right;
+    margin: 15px;
+    color: #CD9CFA;
+}
+
+.descricaopet {
+    padding-top: 15px;
+    padding-left: 5px;
+    max-width: 187px;
+}
+
+.descricaopet p {
+    padding-bottom: 15px;
+    padding-left: 2px;
+}
+
+/*  final css pagina de adote */
+
+
+/* inicio cadastro das ongs */
+
+.container-Ongs {
+    padding: 15px;
+    text-align: center;
+    background-color: #2f2f2f;
+
+}
+
+.bloco-Ong {
+    background-color: #8107f3;
+}
+
+.texto-Ong {
+    color: black;
+}
+
+#nomeong {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 15px;
+}
+
+#emailong {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 15px;
+}
+
+#cnpjong {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 15px;
+}
+
+#cidadeong {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 15px;
+
+}
+
+#enderecoong {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 15px;
+}
+
+#estadoong {
+    margin-left: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 15px;
+}
+
+#senhaong {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 15px;
+}
+
+#confirmarsenha {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 15px;
+
+}
+
+#botaoEntrar {
+    background-color: #2f2f2f;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: -150px;
+}
+
+/* final do cadastro das ongs*/
+
+
+
+/* começo do css da pagina cadastro pet */
+
+.titulocadastropet h2 {
+    color: var(--segundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+
+}
+
+.titulocadastropet h2 i {
+    padding: 0px 10px;
+}
+
+#fundolinear {
+    background-image: linear-gradient(to bottom, #f4eafd00, #cc9cfa49);
+}
+
+.aviso {
+    margin-left: 55px;
+    margin-bottom: 65px;
+    font-size: 1.2rem;
+}
+
+.l {
+    display: inline-block;
+    justify-content: center;
+}
+
+.titulocampoform {
+    margin-bottom: 35px;
+    font-size: 1.5rem;
+}
+
+.dados {
+    margin-left: 55px;
+}
+
+.espacamento {
+    margin-left: 15px;
+}
+
+#cadastropet label {
+    padding-right: 20px;
+    font-size: 1.2rem;
+}
+
+label span {
+    margin-left: 5px;
+    color: var(--texto) !important;
+}
+
+#cadastropet input {
+    border-radius: 10px;
+    border: solid 1px #2f2f2f;
+    outline: none;
+    height: 30px;
+    width: 25%;
+    margin-right: 20px;
+    margin-bottom: 35px;
+    padding-left: 15px;
+
+}
+
+#imgpet {
+    display: flex;
+
+}
+
+.inseririmg {
+    margin: 40px 10px;
+
+}
+
+.inseririmg img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 4px var(--primaria);
+}
+
+#informacoespetform select {
+
+    width: 25%;
+    height: 32px;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 40px;
+    margin-left: -15px;
+
+}
+
+.botaoformcadastro {
+
+    display: flex;
+    justify-content: right;
+}
+
+.botaoformcadastro button {
+    background-color: var(--segundaria);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 20px;
+    margin: 25px 0px;
+
+}
+
+/* final do css da pagina cadastrar pet */
+
+/* inicio do css da pagina perfilpet */
+
+
+.infromacoesiniciais {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 65px;
+    font-size: 20px;
+
+}
+
+.nomepetperfil {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+
+
+#inseririmg {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img2 {
+    width: 300px;
+    height: 300px;
+    z-index: 2;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 4px var(--primaria);
+}
+
+.img1,
+.img3 {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 4px var(--primaria);
+}
+
+.img1 {
+    transform: translatex(30px);
+}
+
+.img3 {
+    transform: translatex(-30px);
+}
+
+#inseririmg img:hover {
+    transform: scale(1.3, 1.3);
+}
+
+.destaquepet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 85px 0px;
+    justify-content: space-evenly;
+
+}
+
+.destaquepet p i {
+    padding-right: 15px;
+}
+
+
+.containerperfilpet {
+    max-width: 750px;
+    margin: 0 auto;
+}
+.infromacoessecundarias{
+    margin-bottom: 35px;
+}
+.infromacoessecundarias p {
+    padding-bottom: 15px;
+    
+}
+
+.botaoperfilpet {
+    background-color: var(--segundaria);
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 15px;
+    margin: 35px 0px;
+
+
+}
+
+.botaoperfilpet a {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+
+}
+
+.historia {
+    padding-left: 5px;
+    margin-top: 10px;
+
+}
+
+#carddoperfil {
+
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
+/* final do css da pagina perfilpet */
+
+/* começo do css da pagina faq */
+.perguntaseresposta{
+    margin: 35px 0px ;
+}
+.perguntafaq{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.perguntafrequentes i{
+    margin-right: 25px;
+}
+.textchamado {
+width: 100%;
+     display: flex;
+    justify-content: center;
+align-items: center;
+}
+.textchamado p{
+    width: 50%;
+}
+#orientação{
+    margin: 135px 0px;
+}
+#orientação h2{
+    text-align: center;
+    margin: 105px 0px;
+}
+#contatonapaginafaq{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nofaqcontato a i{
+    font-size: clamp(55px, 4vw, 100px);
+    color: black;
+}
+.nofaqcontato a i:hover{
+    color: #A15BE2;
+    transform: scale(1.5);
+}
+.nofaqcontato p{
+    text-align: center;
+    margin: 45px 0px;
+    font-size: clamp(16px, 1vw, 20px);
+}
+
+/* final do css da pagina faq */
