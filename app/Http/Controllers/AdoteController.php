@@ -9,4 +9,8 @@ class AdoteController extends Controller
     public function adote(){
          return view("adote-um-amigo");
     }
+
+    public function perfil(){
+        return view("perfilpet");
+    }
 }

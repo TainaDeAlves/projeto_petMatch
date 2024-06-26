@@ -15,4 +15,8 @@ class CadastrosController extends Controller
     public function pets(){
         return view('cadastropet');
     }
+
+    public function login(){
+        return view('login');
+    }
 }

@@ -7,12 +7,21 @@ use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/',[SiteController::class,'home']);
+Route::get('/',[SiteController::class,'home'])->name('home');
+Route::get("/contato", [SiteController::class, "contato"])->name('contato');
+Route::get("/adote", [AdoteController::class, "adote"])->name('adote');
+Route::get("perfil", [AdoteController::class, "perfil"])->name('perfil');
 
-Route::get("/adote", [AdoteController::class, "adote"]);
-Route::get("/usuario",[CadastrosController::class,'user']);
+Route::get("/usuario",[CadastrosController::class,'user'])->name('usuario');
+Route::get("/ongs", [CadastrosController::class, "ongs"])->name('ongs');
+Route::get("/pets", [CadastrosController::class, "pets"])->name('pets');
+Route::get("/login", [CadastrosController::class, "login"])->name('login');
 
-Route::get("/ongs", [CadastrosController::class, "ongs"]);
-Route::get("/pets", [CadastrosController::class, "pets"]);
-Route::get("/sobre-nos", [PaginasEstaticaController::class, "sobre-nos"]);
+
+
+
+Route::get("/sobre-nos", [PaginasEstaticaController::class, "sobreNos"])->name('sobreNos');
+Route::get('/faq',[PaginasEstaticaController::class,'faq'])->name('faq');
+Route::get("/politica" , [PaginasEstaticaController::class, "politica"])->name('politica');
+Route::get("/contribuir", [PaginasEstaticaController::class, "contribuir"])->name('contribuir');
 
