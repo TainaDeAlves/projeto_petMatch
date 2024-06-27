@@ -10,7 +10,7 @@ class SiteController extends Controller
         return view('home');
     }
 
-    public function contato(){
-        return view("contato");
+    public function ongsParceiras(){
+        return view('ongs');
     }
 }

@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[SiteController::class,'home'])->name('home');
-Route::get("/contato", [SiteController::class, "contato"])->name('contato');
+Route::get('/ongsParceiras',[SiteController::class,'ongsParceiras'])->name('ongsParceiras');
+
+
 Route::get("/adote", [AdoteController::class, "adote"])->name('adote');
 Route::get("perfil", [AdoteController::class, "perfil"])->name('perfil');
 
@@ -24,4 +26,5 @@ Route::get("/sobre-nos", [PaginasEstaticaController::class, "sobreNos"])->name('
 Route::get('/faq',[PaginasEstaticaController::class,'faq'])->name('faq');
 Route::get("/politica" , [PaginasEstaticaController::class, "politica"])->name('politica');
 Route::get("/contribuir", [PaginasEstaticaController::class, "contribuir"])->name('contribuir');
+Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('contato');
 

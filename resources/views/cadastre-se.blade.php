@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -20,9 +20,10 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css" /> --}}
+    @extends('layout.home')
   </head>
-
+  
   <body>
     <header id="cabecalho" class="container imagemBanner">
       <div class="barratopo">

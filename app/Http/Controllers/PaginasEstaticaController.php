@@ -20,4 +20,8 @@ class PaginasEstaticaController extends Controller
     public function contribuir(){
         return view("contribucao");
     }
+    
+    public function contato(){
+        return view("contato");
+    }
 }
