@@ -516,9 +516,7 @@ body {
 }
 
 
-/*.redeSocial{
-    
-}*/
+
 
 
 
@@ -809,17 +807,18 @@ body {
 
 .textfaq h2 {
     color: var(--primaria);
-    font-size: 30px;
+    font-size: clamp(30px,5vw,50px);
     padding-top: 50px;
     padding-bottom: 30px;
 }
 
 .textfaq p {
-    font-size: 20px;
+font-size: clamp(30px,1.5vw,50px);
 }
 
 .textfaq p span {
     color: var(--segundaria);
+    font-size: clamp(30px,1.5vw,50px);
 }
 
 .botaofaq {
@@ -971,7 +970,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    height: 90%;
+    height: 15%;
     border-radius: 20px;
     background-color: #cc9cfa40;
     box-shadow: inset 0px 5px 10px 1px #cc9cfa84;
@@ -979,6 +978,7 @@ body {
 
 .formpet {
     width: 100%;
+    
 }
 
 .formpet button {

@@ -20,13 +20,13 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="{{asset("css/main.css")}}"/>
   </head>
 
   <body>
     
      @yield('conteudo')
 
-    <script src="./js/main.js"></script>
+    <script src="{{asset("./js/main.js")}}"></script>
   </body>
 </html>
