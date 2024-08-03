@@ -1,6 +1,6 @@
 <div class="barratopo">
     <div id="logo">
-      <img src="./img/logo3.png" alt="" width="150" />
+      <img src="{{asset("../../img/logo3.png")}}" alt="logo" width="150" />
     </div>
 
     <nav id="menu">

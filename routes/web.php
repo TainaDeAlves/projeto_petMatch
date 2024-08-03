@@ -3,7 +3,9 @@
 use App\Http\Controllers\AdoteController;
 use App\Http\Controllers\CadastrosController;
 use App\Http\Controllers\PaginasEstaticaController;
+use App\Http\Controllers\PetsController;
 use App\Http\Controllers\SiteController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -28,3 +30,5 @@ Route::get("/politica" , [PaginasEstaticaController::class, "politica"])->name('
 Route::get("/contribuir", [PaginasEstaticaController::class, "contribuir"])->name('contribuir');
 Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('contato');
 
+//pets
+Route::get("admin/index",[PetsController::class, "pets"])->name("index");
