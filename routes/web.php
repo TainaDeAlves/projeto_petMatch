@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdoteController;
 use App\Http\Controllers\CadastrosController;
 use App\Http\Controllers\PaginasEstaticaController;
+use App\Http\Controllers\PetsAdminController;
 use App\Http\Controllers\PetsController;
 use App\Http\Controllers\SiteController;
 
@@ -30,5 +31,7 @@ Route::get("/politica" , [PaginasEstaticaController::class, "politica"])->name('
 Route::get("/contribuir", [PaginasEstaticaController::class, "contribuir"])->name('contribuir');
 Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('contato');
 
-//pets
-Route::get("admin/index",[PetsController::class, "pets"])->name("index");
+
+//admin pets
+ Route::get("/adminpet/visualizar", [PetsAdminController::class,"show"])->name("pet.visualizar");
+ Route::get("admin/index",[PetsController::class, "pets"])->name("index");
