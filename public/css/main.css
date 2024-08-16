@@ -1316,7 +1316,7 @@ label span {
 
 
 #inseririmg {
-    margin: 40px;
+    margin: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1357,10 +1357,10 @@ label span {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 85px 0px;
+    margin: 35px 0px;
     justify-content: space-evenly;
-    background-color: #cc9cfa2a;
-    border-radius: 50px;
+    background-color: #cc9cfa54;
+    border-radius: 15px;
     padding: 15px;
 
 }
@@ -1633,7 +1633,18 @@ label span {
     width: auto;
     margin: 35px 0px;
 }
+
 /* pet visualizar */
+.titulovisualizar h1{
+    font-weight: 500;
+    font-size: clamp(25px, 3vw, 30px);
+   text-align: center;
+}
+.fotoscadastradas h2{
+    font-weight: 500;
+    font-size: clamp(25px, 3vw, 30px);
+   
+}
 
 .listadedados {
     margin: 15px 0px;
@@ -1647,4 +1658,35 @@ label span {
 .dadosuser li {
     margin: 10px 0px;
     font-size: clamp(16px, 1.2vw, 20px);
+}
+
+.btncrud a {
+ margin: 0px 45px;
+ width: 50%;
+ color: #2f2f2f;
+ font-size: clamp(16px, 2vw, 20px);
+ 
+}
+
+.btncrud {
+   width: 100%;
+    align-items: center;
+    display: flex;
+   justify-content: right; 
+}
+.btne{
+    background-color: #0048ffbe;
+    width: 20%;
+    border-radius: 25px;
+    padding: 8px 0px;
+    text-align: center;
+    margin: 15px;
+}
+.btnv{
+    background-color: #50515325;
+    width: 20%;
+    border-radius: 25px;
+    padding: 8px 0px;
+    text-align: center;
+    margin: 15px;
 }

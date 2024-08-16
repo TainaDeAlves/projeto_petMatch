@@ -15,7 +15,7 @@ Route::get('/ongsParceiras',[SiteController::class,'ongsParceiras'])->name('ongs
 
 
 Route::get("/adote", [AdoteController::class, "adote"])->name('adote');
-Route::get("perfil", [AdoteController::class, "perfil"])->name('perfil');
+Route::get("/perfil", [AdoteController::class, "perfil"])->name('perfil');
 
 Route::get("/usuario",[CadastrosController::class,'user'])->name('usuario');
 Route::get("/ongs", [CadastrosController::class, "ongs"])->name('ongs');
