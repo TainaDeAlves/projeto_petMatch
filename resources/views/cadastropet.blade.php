@@ -90,8 +90,21 @@
                             </select>
                         </p>
                         <p>
+                            <label for="sexoform">Sexo:</label>
+
+                            <select id="sexoform" name="sexoform">
+                                <option value="m">Macho</option>
+                                <option value="f">Femia</option>
+                            </select>
+                        </p>
+                        <p>
                             <label for="porte">Porte:</label>
-                            <input type="text" name="porte" id="porte">
+
+                            <select id="porte" name="porte">
+                                <option value="p">Pequeno</option>
+                                <option value="m">Medío</option>
+                                <option value="g">Grande</option>
+                            </select>
                         </p>
                         <p>
                             <label for="idade">Idade:</label>

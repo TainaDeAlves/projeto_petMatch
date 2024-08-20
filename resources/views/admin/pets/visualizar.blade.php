@@ -35,10 +35,10 @@
                 <div class="dadosuser">
                     <li><strong>Nome do pet:</strong> Bob</li>
                     <li><strong>Sexo:</strong> Macho</li>
-                    <li> <strong>Raça:</strong>golden retriever</li>
+                    <li> <strong>Raça:</strong> Golden retriever</li>
                     <li><strong>Localização:</strong> Marilia-SP</li>
-                    <li><strong>Porte:</strong>Medío</li>
-                    <li><strong>Especie:</strong>Cachorro</li>
+                    <li><strong>Porte:</strong> Medío</li>
+                    <li><strong>Especie:</strong> Cachorro</li>
                 </div>
 
                 <div class="sobreopet">
@@ -56,7 +56,7 @@
 
 
             </ul>
-
+<section class="sobreopet">
             <div class="descricaopetperfil">
                 <p class="nomepetperfil"><span> Sobre o Bob</span> </p>
 
@@ -68,13 +68,13 @@
                 </p>
 
             </div>
-
+</section>
         </section>
 
         <div class="botoes">
             <div class="btncrud">
 
-                <div class="btne"><a href="">Editar</a></div>
+                <div class="btne"><a href="{{route('pets')}}">Editar</a></div>
 
                 <div class="btnv"><a href="">Cancelar</a></div>
 

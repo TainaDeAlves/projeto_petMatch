@@ -777,14 +777,6 @@ body {
 
 }
 
-
-
-
-
-
-
-
-
 /*login*/
 
 .cadastre-se1 {
@@ -1264,10 +1256,15 @@ label span {
     border-radius: 50%;
     object-fit: cover;
     border: solid 4px var(--primaria);
+    cursor: pointer;
+}
+
+#informacoespetform p label{
+    margin-right: 25px;
 }
 
 #informacoespetform select {
-
+    
     width: 25%;
     height: 32px;
     border-radius: 10px;
@@ -1359,7 +1356,7 @@ label span {
     align-items: center;
     margin: 35px 0px;
     justify-content: space-evenly;
-    background-color: #cc9cfa54;
+    background-color: #cc9cfa2d;
     border-radius: 15px;
     padding: 15px;
 
@@ -1635,15 +1632,16 @@ label span {
 }
 
 /* pet visualizar */
-.titulovisualizar h1{
+.titulovisualizar h1 {
     font-weight: 500;
     font-size: clamp(25px, 3vw, 30px);
-   text-align: center;
+    text-align: center;
 }
-.fotoscadastradas h2{
+
+.fotoscadastradas h2 {
     font-weight: 500;
     font-size: clamp(25px, 3vw, 30px);
-   
+
 }
 
 .listadedados {
@@ -1660,21 +1658,26 @@ label span {
     font-size: clamp(16px, 1.2vw, 20px);
 }
 
+.sobreopet {
+    width: 85%;
+}
+
 .btncrud a {
- margin: 0px 45px;
- width: 50%;
- color: #2f2f2f;
- font-size: clamp(16px, 2vw, 20px);
- 
+    margin: 0px 45px;
+    width: 50%;
+    color: #2f2f2f;
+    font-size: clamp(16px, 2vw, 20px);
+
 }
 
 .btncrud {
-   width: 100%;
+    width: 100%;
     align-items: center;
     display: flex;
-   justify-content: right; 
+    justify-content: right;
 }
-.btne{
+
+.btne {
     background-color: #0048ffbe;
     width: 20%;
     border-radius: 25px;
@@ -1682,7 +1685,8 @@ label span {
     text-align: center;
     margin: 15px;
 }
-.btnv{
+
+.btnv {
     background-color: #50515325;
     width: 20%;
     border-radius: 25px;
