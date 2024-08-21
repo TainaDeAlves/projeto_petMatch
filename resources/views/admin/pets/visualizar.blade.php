@@ -76,7 +76,7 @@
 
                 <div class="btne"><a href="{{route('pets')}}">Editar</a></div>
 
-                <div class="btnv"><a href="">Cancelar</a></div>
+                <div class="btnv"><a href="{{route('index')}}">Cancelar</a></div>
 
             </div>
 
