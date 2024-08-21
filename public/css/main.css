@@ -646,13 +646,15 @@ body {
     margin-bottom: 30px;
 
 }
-.textindicativo{
+
+.textindicativo {
     text-align: center;
     margin: 100px 0px;
-    
+
 
 }
-.textindicativo h2{
+
+.textindicativo h2 {
     font-weight: 500;
     font-size: clamp(25px, 3vw, 35px);
 }
@@ -775,14 +777,6 @@ body {
 
 }
 
-
-
-
-
-
-
-
-
 /*login*/
 
 .cadastre-se1 {
@@ -807,18 +801,18 @@ body {
 
 .textfaq h2 {
     color: var(--primaria);
-    font-size: clamp(30px,5vw,50px);
+    font-size: clamp(30px, 5vw, 50px);
     padding-top: 50px;
     padding-bottom: 30px;
 }
 
 .textfaq p {
-font-size: clamp(30px,1.5vw,50px);
+    font-size: clamp(30px, 1.5vw, 50px);
 }
 
 .textfaq p span {
     color: var(--segundaria);
-    font-size: clamp(30px,1.5vw,50px);
+    font-size: clamp(30px, 1.5vw, 50px);
 }
 
 .botaofaq {
@@ -978,7 +972,7 @@ font-size: clamp(30px,1.5vw,50px);
 
 .formpet {
     width: 100%;
-    
+
 }
 
 .formpet button {
@@ -1262,10 +1256,15 @@ label span {
     border-radius: 50%;
     object-fit: cover;
     border: solid 4px var(--primaria);
+    cursor: pointer;
+}
+
+#informacoespetform p label{
+    margin-right: 25px;
 }
 
 #informacoespetform select {
-
+    
     width: 25%;
     height: 32px;
     border-radius: 10px;
@@ -1314,7 +1313,7 @@ label span {
 
 
 #inseririmg {
-    margin: 40px;
+    margin: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1355,8 +1354,11 @@ label span {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 85px 0px;
+    margin: 35px 0px;
     justify-content: space-evenly;
+    background-color: #cc9cfa2d;
+    border-radius: 15px;
+    padding: 15px;
 
 }
 
@@ -1369,12 +1371,14 @@ label span {
     max-width: 750px;
     margin: 0 auto;
 }
-.infromacoessecundarias{
+
+.infromacoessecundarias {
     margin-bottom: 35px;
 }
+
 .infromacoessecundarias p {
     padding-bottom: 15px;
-    
+
 }
 
 .botaoperfilpet {
@@ -1409,50 +1413,284 @@ label span {
 /* final do css da pagina perfilpet */
 
 /* começo do css da pagina faq */
-.perguntaseresposta{
-    margin: 35px 0px ;
+.perguntaseresposta {
+    margin: 35px 0px;
 }
-.perguntafaq{
+
+.perguntafaq {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.perguntafrequentes i{
+
+.perguntafrequentes i {
     margin-right: 25px;
 }
+
 .textchamado {
-width: 100%;
-     display: flex;
+    width: 100%;
+    display: flex;
     justify-content: center;
-align-items: center;
+    align-items: center;
 }
-.textchamado p{
+
+.textchamado p {
     width: 50%;
 }
-#orientação{
+
+#orientação {
     margin: 135px 0px;
 }
-#orientação h2{
+
+#orientação h2 {
     text-align: center;
     margin: 105px 0px;
 }
-#contatonapaginafaq{
+
+#contatonapaginafaq {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.nofaqcontato a i{
+
+.nofaqcontato a i {
     font-size: clamp(55px, 4vw, 100px);
     color: black;
 }
-.nofaqcontato a i:hover{
+
+.nofaqcontato a i:hover {
     color: #A15BE2;
     transform: scale(1.5);
 }
-.nofaqcontato p{
+
+.nofaqcontato p {
     text-align: center;
     margin: 45px 0px;
     font-size: clamp(16px, 1vw, 20px);
 }
 
 /* final do css da pagina faq */
+
+
+/* admin começo */
+#navadmin {
+    margin: 45px 0px;
+}
+
+.gato {
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: -95px;
+
+}
+
+.listaflitro ul {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border: solid 1px #cc9cfa81;
+    box-shadow: 0px 5px 10px 5px #cc9cfa4d;
+    border-radius: 50px;
+    height: 60px;
+    padding: 0px 20px;
+}
+
+.listaflitro ul li {
+    display: flex;
+    align-items: center;
+    font-family: var(--texttitulo);
+    font-size: Clamp(20px, 1vw, 35px);
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    margin: 0px -20px;
+
+
+}
+
+.listaflitro ul li a {
+    z-index: 999999;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.842);
+    font-weight: 550;
+}
+
+.listaflitro ul li a i {
+    margin-right: 15px;
+}
+
+.listaflitro ul li:hover {
+    background-color: #cc9cfa50;
+    border-radius: 50px;
+}
+
+.informacoes {
+    padding: 25px;
+    background-color: #cc9cfa11;
+    height: auto;
+    padding: 10px;
+    width: auto;
+    margin: 35px 0px;
+
+}
+
+.borda {
+    display: flex;
+    align-items: center;
+    border: solid 2px #cc9cfa98;
+    border-radius: 135px 50px 50px 135px;
+}
+
+.dadosconteudo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+}
+
+.imgdocard img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin: 5px 10px;
+
+}
+
+.dadosprincipais p {
+    margin: 12px 0px;
+    font-size: clamp(14px, 1.1vw, 20px);
+    word-wrap: break-word;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.botoescrud {
+    height: 100%;
+    width: 20%;
+
+}
+
+.botoescrud a {
+    color: #ffffff;
+}
+
+
+.botaocrud a {
+    display: flex;
+    width: 100%;
+}
+
+.botaocrudex button {
+    color: #ffffff;
+    text-align: center;
+    width: 70%;
+    border: none;
+    background-color: #ff030370;
+    cursor: pointer;
+    font-size: clamp(12px, 0.90vw, 20px);
+    padding: 6px 0px;
+    border-radius: 25px;
+}
+
+.botaocrud i {
+    margin-right: 25px;
+}
+
+.botaocrudv {
+    background-color: #cc9cfab4;
+    width: 70%;
+    border-radius: 25px;
+    padding: 8px 0px;
+    margin: 15px 0px;
+    text-align: center;
+
+}
+
+.botaocrude {
+    background-color: #0048ffbe;
+    width: 70%;
+    border-radius: 25px;
+    padding: 8px 0px;
+    text-align: center;
+    margin: 15px 0px;
+
+}
+
+.informacao {
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+    width: auto;
+    margin: 35px 0px;
+}
+
+/* pet visualizar */
+.titulovisualizar h1 {
+    font-weight: 500;
+    font-size: clamp(25px, 3vw, 30px);
+    text-align: center;
+}
+
+.fotoscadastradas h2 {
+    font-weight: 500;
+    font-size: clamp(25px, 3vw, 30px);
+
+}
+
+.listadedados {
+    margin: 15px 0px;
+    list-style: none;
+}
+
+.listadedados h2 {
+    margin: 15px 0px;
+}
+
+.dadosuser li {
+    margin: 10px 0px;
+    font-size: clamp(16px, 1.2vw, 20px);
+}
+
+.sobreopet {
+    width: 85%;
+}
+
+.btncrud a {
+    margin: 0px 45px;
+    width: 50%;
+    color: #2f2f2f;
+    font-size: clamp(16px, 2vw, 20px);
+
+}
+
+.btncrud {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: right;
+}
+
+.btne {
+    background-color: #0048ffbe;
+    width: 20%;
+    border-radius: 25px;
+    padding: 8px 0px;
+    text-align: center;
+    margin: 15px;
+}
+
+.btnv {
+    background-color: #50515325;
+    width: 20%;
+    border-radius: 25px;
+    padding: 8px 0px;
+    text-align: center;
+    margin: 15px;
+}
