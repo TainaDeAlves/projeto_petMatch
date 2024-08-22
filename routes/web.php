@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\AdoteController;
+use App\Http\Controllers\User;
 use App\Http\Controllers\CadastrosController;
 use App\Http\Controllers\PaginasEstaticaController;
 use App\Http\Controllers\PetsAdminController;
 use App\Http\Controllers\PetsController;
+use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\SiteController;
 
 use Illuminate\Support\Facades\Route;
@@ -35,3 +37,9 @@ Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('con
 //admin pets
  Route::get("/adminpet/visualizar", [PetsAdminController::class,"show"])->name("pet.visualizar");
  Route::get("admin/index",[PetsController::class, "pets"])->name("index");
+
+
+ //admin Usuario
+
+ Route::get("/admin/usuarios/visualizar", [UsuarioController::class,"show"])->name("admin.usuarios.visualizar");
+ Route::get("/admin/usuarios/index", [UsuarioController::class,"index"])->name("admin.usuarios.index");
