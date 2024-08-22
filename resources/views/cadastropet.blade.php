@@ -16,8 +16,7 @@
             <p class="aviso">Campos com * são obrigatorios</p>
 
             <form method="post" action="#" id="cadastropet">
-
-
+                    @csrf
                 <div id="dadosdoador" class="dados">
 
                     <p class="titulocampoform">Dados do doador:</p>
@@ -53,14 +52,14 @@
 
                         <div class="inseririmg">
 
-                            <img src="{{asset("./img/pet_7104394.png")}}"alt="Imagem" id="imagem"
+                            <img src="{{asset('./img/pet_7104394.png')}}" alt="Imagem" id="imagem"
                                 onclick="document.getElementById('inputImagem').click()">
                             <input type="file" id="inputImagem" accept="image/*" style="display: none;"
                                 data-imagemid="imagem">
                         </div>
                         <div class="inseririmg">
 
-                            <img src="{{asset("./img/pet_7104394.png")}}"alt="Imagem" id="imagem1"
+                            <img src="{{asset('./img/pet_7104394.png')}}" alt="Imagem" id="imagem1"
                                 onclick="document.getElementById('inputImagem1').click()">
                             <input type="file" id="inputImagem1" accept="image/*" style="display: none;"
                                 data-imagemid="imagem1">
@@ -68,7 +67,7 @@
 
                         <div class="inseririmg">
 
-                            <img src="{{asset("./img/pet_7104394.png")}}"alt="Imagem" id="imagem2"
+                            <img src="{{asset('./img/pet_7104394.png')}}" alt="Imagem" id="imagem2"
                                 onclick="document.getElementById('inputImagem2').click()">
                             <input type="file" id="inputImagem2" accept="image/*" style="display: none;"
                                 data-imagemid="imagem2">
@@ -139,6 +138,8 @@
                 </div>
 
                 <div class="botaoformcadastro">
+
+                    <a href="{{route('index')}}">Cancelar</a>
                     <button name="cadastrarpet">Cadastrar</button>
                 </div>
 
@@ -149,7 +150,7 @@
     </main>
 
 @include("includes.rodape")
-    <script src="{{asset("./js/cadastropet.js")}}"></script>
+    <script src="{{asset('./js/cadastropet.js')}}"></script>
 </body>
 
 </html>
