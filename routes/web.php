@@ -41,5 +41,6 @@ Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('con
 
  //admin Usuario
 
- Route::get("/admin/usuarios/visualizar", [UsuarioController::class,"show"])->name("admin.usuarios.visualizar");
  Route::get("/admin/usuarios/index", [UsuarioController::class,"index"])->name("admin.usuarios.index");
+ Route::get("/admin/usuarios/visualizar", [UsuarioController::class,"show"])->name("admin.usuarios.visualizar");
+ Route::get("/admin/usuarios/editar", [UsuarioController::class,"edit"])->name("admin.usuarios.editar");

@@ -35,10 +35,10 @@ class UsuarioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        $usuarios = User::findOrFail($id);
-        return view('admin.usuarios.visualizar', compact('usuarios'));
+        $usuarios = User::all();
+        return view('admin.usuario.visualizar', compact('usuarios'));
  
 
     }
@@ -46,9 +46,10 @@ class UsuarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit()
     {
-        //
+        $usuarios = User::all();
+        return view('admin.usuario.editar', compact('usuarios'));
     }
 
     /**

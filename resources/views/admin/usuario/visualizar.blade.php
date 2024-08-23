@@ -23,9 +23,12 @@
                 <h2>Fotos:</h2>
                 <div class="img" id="inseririmg">
 
-                    <img src="{{ asset('./img/Homem 1.png') }}" alt="fotopet" class="img1">
-                    <img src="{{ asset('./img/Homem 1.png') }}" alt="fotopet" class="img2">
-                    <img src="{{ asset('./img/Homem 1.png') }}" alt="fotopet" class="img3">
+                    <img src="{{ asset('./img/Homem 1.png') }}" alt="fotopet" style="filter: blur(0px);
+    transition: filter 0.1ms ease-in-out;" class="img1">
+                    <img src="{{ asset('./img/Homem 1.png') }}" alt="fotopet" style="filter: blur(0px);
+    transition: filter 0.1ms ease-in-out;" class="img2">
+                    <img src="{{ asset('./img/Homem 1.png') }}" alt="fotopet" style="filter: blur(0px);
+    transition: filter 0.1ms ease-in-out;" class="img3">
 
                 </div>
             </div>
@@ -34,7 +37,7 @@
 
                 <div class="dadosuser">
                     <li><strong>Nome:</strong> Mario</li>
-                    <li><strong>email:</strong> Cachorro</li>
+                    <li><strong>email:</strong> mario@gmail.com</li>
                     <li><strong>Genero:</strong> Masculino</li>
                     <li><strong>Localização:</strong> Marilia-SP</li>
                     <li><strong>Estado:</strong> São Paulo</li>
@@ -46,10 +49,10 @@
 
                     <div class="destaquepet">
 
-                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>Alegre</strong></p>
-                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>Compangeiro</strong>
+                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>Casado</strong></p>
+                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>2 Filhos</strong>
                         </p>
-                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>Amigavel</strong> </p>
+                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>Gosto De Cachorros e Gatos</strong> </p>
 
                     </div>
                 </div>
@@ -70,9 +73,9 @@
         <div class="botoes">
             <div class="btncrud">
 
-                <div class="btne"><a href="#">Editar</a></div>
+                <div class="btne"><a href="{{route('admin.usuarios.editar')}}">Editar</a></div>
 
-                <div class="btnv"><a href="#">Cancelar</a></div>
+                <div class="btnv"><a href="{{route("admin.usuarios.index")}}">Cancelar</a></div>
 
             </div>
 
