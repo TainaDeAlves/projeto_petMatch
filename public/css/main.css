@@ -1274,13 +1274,21 @@ label span {
 
 }
 
-.botaoformcadastro {
-
+.botaoformcadastrop {
     display: flex;
     justify-content: right;
+    align-items: center;
 }
-
-.botaoformcadastro button {
+.botaoformcadastrop a{
+    background-color: #666666;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 20px;
+    margin: 35px;
+}
+.botaoformcadastrop button{
     background-color: var(--segundaria);
     border: none;
     padding: 10px 30px;

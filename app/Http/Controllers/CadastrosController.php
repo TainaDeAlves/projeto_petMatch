@@ -12,9 +12,6 @@ class CadastrosController extends Controller
     public function ongs(){
         return view('cadastro-ongs');
     }
-    public function pets(){
-        return view('cadastropet');
-    }
 
     public function login(){
         return view('login');

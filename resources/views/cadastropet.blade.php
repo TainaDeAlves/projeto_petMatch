@@ -2,7 +2,7 @@
 
 <body>
     <header id="cabecalho" class="container paginainterna">
-        @include("includes.barratopo")
+        @include('includes.barratopo')
     </header>
     <main id="fundolinear">
         <div class="container">
@@ -53,14 +53,14 @@
 
                         <div class="inseririmg">
 
-                            <img src="{{asset("./img/pet_7104394.png")}}"alt="Imagem" id="imagem"
+                            <img src="{{ asset('./img/pet_7104394.png') }}"alt="Imagem" id="imagem"
                                 onclick="document.getElementById('inputImagem').click()">
                             <input type="file" id="inputImagem" accept="image/*" style="display: none;"
                                 data-imagemid="imagem">
                         </div>
                         <div class="inseririmg">
 
-                            <img src="{{asset("./img/pet_7104394.png")}}"alt="Imagem" id="imagem1"
+                            <img src="{{ asset('./img/pet_7104394.png') }}"alt="Imagem" id="imagem1"
                                 onclick="document.getElementById('inputImagem1').click()">
                             <input type="file" id="inputImagem1" accept="image/*" style="display: none;"
                                 data-imagemid="imagem1">
@@ -68,7 +68,7 @@
 
                         <div class="inseririmg">
 
-                            <img src="{{asset("./img/pet_7104394.png")}}"alt="Imagem" id="imagem2"
+                            <img src="{{ asset('./img/pet_7104394.png') }}"alt="Imagem" id="imagem2"
                                 onclick="document.getElementById('inputImagem2').click()">
                             <input type="file" id="inputImagem2" accept="image/*" style="display: none;"
                                 data-imagemid="imagem2">
@@ -88,6 +88,10 @@
                                 <option value="cr">Cachorro</option>
                                 <option value="gt">Gato</option>
                             </select>
+                        </p>
+                        <p>
+                            <label for="raca">Raça:</label>
+                            <input type="text" name="raca" id="raca">
                         </p>
                         <p>
                             <label for="sexoform">Sexo:</label>
@@ -138,18 +142,18 @@
 
                 </div>
 
-                <div class="botaoformcadastro">
+                <div class="botaoformcadastrop">
+                    <a href="{{ isset($pet) ? '/admin/index' : '/' }}" class="btn btn-secondary">Cancelar</a>
                     <button name="cadastrarpet">Cadastrar</button>
                 </div>
-
 
             </form>
         </div>
 
     </main>
 
-@include("includes.rodape")
-    <script src="{{asset("./js/cadastropet.js")}}"></script>
+    @include('includes.rodape')
+    <script src="{{ asset('./js/cadastropet.js') }}"></script>
 </body>
 
 </html>

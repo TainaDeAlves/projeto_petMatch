@@ -19,7 +19,7 @@ Route::get("/perfil", [AdoteController::class, "perfil"])->name('perfil');
 
 Route::get("/usuario",[CadastrosController::class,'user'])->name('usuario');
 Route::get("/ongs", [CadastrosController::class, "ongs"])->name('ongs');
-Route::get("/pets", [CadastrosController::class, "pets"])->name('pets');
+
 Route::get("/login", [CadastrosController::class, "login"])->name('login');
 
 
@@ -33,5 +33,7 @@ Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('con
 
 
 //admin pets
- Route::get("/adminpet/visualizar", [PetsAdminController::class,"show"])->name("pet.visualizar");
- Route::get("admin/index",[PetsController::class, "pets"])->name("index");
+ Route::get("/adminpet/visualizar", [PetsController::class,"show"])->name("pet.visualizar");
+ Route::get("admin/index",[PetsController::class, "index"])->name("index");
+ 
+ Route::get("/pets", [PetsController::class, "create"])->name('pets');
