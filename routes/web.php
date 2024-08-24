@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\AdoteController;
+use App\Http\Controllers\User;
 use App\Http\Controllers\CadastrosController;
 use App\Http\Controllers\PaginasEstaticaController;
 use App\Http\Controllers\PetsAdminController;
 use App\Http\Controllers\PetsController;
+use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\SiteController;
 
 use Illuminate\Support\Facades\Route;

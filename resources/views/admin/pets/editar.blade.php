@@ -25,20 +25,18 @@
                     <div class="borda">
                         <div class="dadosconteudo">
                             <div class="imgdocard">
-                                <img src="{{ asset('../img/Homem 1.png') }}" height="120">
+                                <img src="{{ asset('../img/73997.jpg') }}" height="120">
                             </div>
 
                             <div class="dadosprincipais">
                                 <p>ID:1</p>
-                                <p>Nome: Mario</p>
-                                <p>Email: mario@gmail.com</p>
-                                <p>Senha: *********</p>
-                                <p>Genero: Masculio</p>
-                                <p>Descrição: Olá! Meu nome é Mário e estou em busca de um novo amigo de quatro patas <br> para compartilhar minha vida. Sou um homem de 32 anos, apaixonado por animais e com um <br> grande amor pelos cães e gatos.</p>
+                                <p>Nome: Bob</p>
+                                <p>Sexo: Macho</p>
+                                <p>Descrição: É um cachorro muito dócil e alegre, que esta em busca de nova família</p>
                             </div>
                         </div>
                         <div class="botoescrud">
-                            <div class="botaocrudv" > <a href="{{route('admin.usuarios.visualizar')}}">Visualizar</a>
+                            <div class="botaocrudv" > <a href="">Visualizar</a>
                             </div>
 
                             <div class="botaocrude"><a href="">Editar</a>
@@ -56,23 +54,21 @@
                     <div class="borda">
                         <div class="dadosconteudo">
                             <div class="imgdocard">
-                                <img src="{{ asset('../img/Homem 1.png') }}" height="120">
+                                <img src="{{ asset('../img/73997.jpg') }}" height="120">
                             </div>
 
                             <div class="dadosprincipais">
                                 <p>ID:1</p>
-                                <p>Nome: Mario</p>
-                                <p>Email: mario@gmail.com</p>
-                                <p>Senha: *********</p>
-                                <p>Genero: Masculio</p>
-                                <p>Descrição: Olá! Meu nome é Mário e estou em busca de um novo amigo de quatro patas <br> para compartilhar minha vida. Sou um homem de 32 anos, apaixonado por animais e com um <br> grande amor pelos cães e gatos.</p>
+                                <p>Nome: Bob</p>
+                                <p>Sexo: Macho</p>
+                                <p>Descrição: É umca de nova famíliaÉ um cachorro muito dócil e alegre, que esta em busca de nova família</p>
                             </div>
                         </div>
                         <div class="botoescrud">
-                            <div class="botaocrudv"><a href="{{route('admin.usuarios.visualizar')}}">Visualizar</a>
+                            <div class="botaocrudv"><a href="{{route('pet.visualizar')}}">Visualizar</a>
                             </div>
 
-                            <div class="botaocrude"><a href="{{route('admin.usuarios.editar')}}">Editar</a></div>
+                            <div class="botaocrude"><a href="{{route('pets')}}">Editar</a></div>
 
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>
                             </div>
@@ -86,23 +82,21 @@
                             <div class="borda">
                           <div class="dadosconteudo">
                             <div class="imgdocard">
-                              <img src="{{ asset('../img/Homem 1.png')}}" height="120">
+                              <img src="{{ asset('../img/73997.jpg')}}" height="120">
                             </div>
             
                             <div class="dadosprincipais">
                                 <p>ID:1</p>
-                                <p>Nome: Mario</p>
-                                <p>Email: mario@gmail.com</p>
-                                <p>Senha: *********</p>
-                                <p>Genero: Masculio</p>
-                                <p>Descrição: Olá! Meu nome é Mário e estou em busca de um novo amigo de quatro patas <br> para compartilhar minha vida. Sou um homem de 32 anos, apaixonado por animais e com um <br> grande amor pelos cães e gatos.</p>
+                                <p>Nome: Bob</p>
+                                <p>Sexo: Macho</p>
+                                <p>Descrição: É um cachorro muito dócil e alegre, que esta em busca de nova família</p>
                             </div>
                           </div>
                           <div class="botoescrud">
-                            <div class="botaocrudv"> <a href="{{route("admin.usuarios.visualizar")}}">Visualizar</a>
+                            <div class="botaocrudv"> <a href="">Visualizar</a>
                             </div>
             
-                            <div class="botaocrude"><a href="{{route("admin.usuarios.editar")}}">Editar</a>
+                            <div class="botaocrude"><a href="">Editar</a>
                             </div>
             
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>

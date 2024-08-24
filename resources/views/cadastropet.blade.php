@@ -16,8 +16,7 @@
             <p class="aviso">Campos com * são obrigatorios</p>
 
             <form method="post" action="#" id="cadastropet">
-
-
+                    @csrf
                 <div id="dadosdoador" class="dados">
 
                     <p class="titulocampoform">Dados do doador:</p>
