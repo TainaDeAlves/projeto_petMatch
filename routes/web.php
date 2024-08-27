@@ -4,7 +4,6 @@ use App\Http\Controllers\AdoteController;
 use App\Http\Controllers\User;
 use App\Http\Controllers\CadastrosController;
 use App\Http\Controllers\PaginasEstaticaController;
-use App\Http\Controllers\PetsAdminController;
 use App\Http\Controllers\PetsController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\SiteController;
@@ -39,3 +38,6 @@ Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('con
  Route::get("admin/index",[PetsController::class, "index"])->name("index");
  
  Route::get("/pets", [PetsController::class, "create"])->name('pets');
+
+//   admin usuario 
+Route::get("/adminusuario",[UsuarioController::class,"index"])->name("index.usuario");

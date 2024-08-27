@@ -12,8 +12,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuarios = User::all();
-        return view('admin.usuario.index', compact('usuarios'));
+        return view('admin.usuario.index');
     }
 
     /**
@@ -27,7 +26,7 @@ class UsuarioController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $requestz)
     {
         //
     }
@@ -37,8 +36,7 @@ class UsuarioController extends Controller
      */
     public function show()
     {
-        $usuarios = User::all();
-        return view('admin.usuario.visualizar', compact('usuarios'));
+        return view('admin.usuario.visualizar');
  
 
     }
@@ -48,8 +46,7 @@ class UsuarioController extends Controller
      */
     public function edit()
     {
-        $usuarios = User::all();
-        return view('admin.usuario.editar', compact('usuarios'));
+        return view('admin.usuario.editar');
     }
 
     /**
