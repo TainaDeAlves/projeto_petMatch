@@ -12,15 +12,15 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        return view('admin.usuario.index');
+       $usuarios = User::all();
+       return view('admin.usuarios.index', compact('usuarios'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        return view('admin.usuarios.cadastrar');
     }
 
     /**
@@ -36,7 +36,8 @@ class UsuarioController extends Controller
      */
     public function show()
     {
-        return view('admin.usuario.visualizar');
+
+        return view('admin.usuarios.visualizar');
  
 
     }
@@ -46,7 +47,7 @@ class UsuarioController extends Controller
      */
     public function edit()
     {
-        return view('admin.usuario.editar');
+        return view('admin.usuarios.editar');
     }
 
     /**

@@ -13,8 +13,8 @@
     </div>
     <div class="categorias">
         <h1>Categorias</h1>
-        <a href="adote-um-amigo.html">Adote</a>
-        <a href="contribucao.html">Contribua</a>
+        <a href="{{route('adote')}}">Adote</a>
+        <a href="{{route('contribuir')}}">Contribua</a>
         <!-- <a href="#">Blog</a> -->
     </div>
 

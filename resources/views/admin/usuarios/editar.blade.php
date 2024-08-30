@@ -38,10 +38,10 @@
                             </div>
                         </div>
                         <div class="botoescrud">
-                            <div class="botaocrudv" > <a href="{{route('admin.usuario.visualizar')}}">Visualizar</a>
+                            <div class="botaocrudv" > <a href="{{route('admin.usuarios.visualizar')}}">Visualizar</a>
                             </div>
 
-                            <div class="botaocrude"><a href="">Editar</a>
+                            <div class="botaocrude"><a href="admin.usuarios.editar">Editar</a>
                             </div>
 
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>
@@ -69,10 +69,10 @@
                             </div>
                         </div>
                         <div class="botoescrud">
-                            <div class="botaocrudv"><a href="{{route('admin.usuario.visualizar')}}">Visualizar</a>
+                            <div class="botaocrudv"><a href="{{route('admin.usuarios.visualizar')}}">Visualizar</a>
                             </div>
 
-                            <div class="botaocrude"><a href="{{route('admin.usuario.editar')}}">Editar</a></div>
+                            <div class="botaocrude"><a href="{{route('admin.usuarios.editar')}}">Editar</a></div>
 
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>
                             </div>
@@ -99,10 +99,10 @@
                             </div>
                           </div>
                           <div class="botoescrud">
-                            <div class="botaocrudv"> <a href="{{route("admin.usuario.visualizar")}}">Visualizar</a>
+                            <div class="botaocrudv"> <a href="{{route("admin.usuarios.visualizar")}}">Visualizar</a>
                             </div>
             
-                            <div class="botaocrude"><a href="{{route("admin.usuario.editar")}}">Editar</a>
+                            <div class="botaocrude"><a href="{{route("admin.usuarios.editar")}}">Editar</a>
                             </div>
             
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>

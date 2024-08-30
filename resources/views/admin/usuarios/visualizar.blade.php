@@ -73,9 +73,9 @@
         <div class="botoes">
             <div class="btncrud">
 
-                <div class="btne"><a href="{{route('admin.usuario.editar')}}">Editar</a></div>
+                <div class="btne"><a href="{{route('admin.usuarios.editar')}}">Editar</a></div>
 
-                <div class="btnv"><a href="{{route("admin.usuario.index")}}">Cancelar</a></div>
+                <div class="btnv"><a href="{{route("admin.usuarios.index")}}">Cancelar</a></div>
 
             </div>
 

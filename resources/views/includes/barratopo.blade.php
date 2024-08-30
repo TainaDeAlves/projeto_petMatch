@@ -6,15 +6,15 @@
     <nav id="menu">
       <ul>
         <li>
-          <a href="index.html">Página Inicial</a>
+          <a href="{{route('home')}}">Página Inicial</a>
         </li>
 
         <li>
-          <a href="adote-um-amigo.html">Adote</a>
+          <a href="{{route('adote')}}">Adote</a>
         </li>
 
         <li>
-          <a href="contribucao.html">Contribua</a>
+          <a href="{{route('contribuir')}}">Contribua</a>
         </li>
 
       </ul>
@@ -29,7 +29,7 @@
     </div>
 
     <div id="botao">
-      <a href="cadastre-se.html">Cadastre-se</a>
+      <a href="{{route('usuario')}}">Cadastre-se</a>
       <a href="login.html">Login</a>
     </div>
   </div>
