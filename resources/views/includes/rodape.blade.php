@@ -35,7 +35,7 @@
 
     <div class="baixe-apps">
         <h4>Baixe o nosso app</h4>
-        <img src="{{route('../img/playstore.png')}}" alt="playstore" />
-        <img src="{{route('../img/appstore.png')}}" alt="appstore" />
+        <img src="{{asset('../img/playstore.png')}}" alt="playstore" />
+        <img src="{{asset('../img/appstore.png')}}" alt="appstore" />
     </div>
 </footer>
