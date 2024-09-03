@@ -35,8 +35,10 @@ Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('con
 
 //admin pets
  Route::get("/adminpet/visualizar", [PetsController::class,"show"])->name("pet.visualizar");
- Route::get("admin/index",[PetsController::class, "index"])->name("index");
  
+ Route::post("/adminpet/store", [PetsController::class,"store"])->name("pet.store");
+ Route::get("/adminpet/pdate", [PetsController::class,"update"])->name("pet.update");
+ Route::get("admin/index",[PetsController::class, "index"])->name("index");
  Route::get("/pets", [PetsController::class, "create"])->name('pets');
 
 //   admin usuario 
@@ -44,3 +46,5 @@ Route::get("/admin/usuarios/index",[UsuarioController::class,"index"])->name("ad
 Route::get("/admin/usuarios/editar",[UsuarioController::class, "edit"])->name("admin.usuarios.editar");
 Route::get("/admin/usuarios/visualizar", [UsuarioController::class, "show"])->name("admin.usuarios.visualizar");
 Route::get("/admin/usuarios/cadastrar", [UsuarioController::class, 'create'])->name("admin.usuarios.cadastrar");
+Route::post("/admin/cadastrarsalvar",[UsuarioController::class, "store"])->name("cadastrosalvo");
+

@@ -1,6 +1,7 @@
 @extends('layout.home')
 
 
+@section("conteudo")
 
 
 <header id="cabecalho" class="container paginainterna">
@@ -15,7 +16,9 @@
 
     <section class="naveconteudo">
 
-
+        <div class="botaoformcadastrop" >
+            <a href="{{route("admin.usuarios.cadastrar")}}">Cadastrar</a>  
+          </div>
 
         <div class="listadoconteudo">
 
@@ -115,4 +118,6 @@
 
 
 @include('includes.rodape')
-<script src="{{ asset('./js/main.js') }}"></script>
+
+@endsection
+
