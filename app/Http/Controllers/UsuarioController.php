@@ -32,12 +32,16 @@ class UsuarioController extends Controller
         $request->validate([
             'nome' => ' required',
             'email' => 'required|string|email|unique:usuarios',
+            'cidade'=> 'required|string',
+            'estado'=> 'required|string',
             'password' => 'required|min:8|confirmed'
         ]);
 
         User::create([
             'nome' => $request->nome,
             'email' => $request->email,
+            'cidade'=> $request->cidade,
+            'estado'=> $request->estado,
             'password' => Hash::make($request->senha)
         ]);
 

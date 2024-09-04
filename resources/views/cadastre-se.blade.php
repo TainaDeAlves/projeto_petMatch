@@ -25,8 +25,8 @@
                 {{ session('sucesso') }}
             </div>
         @endif
-       
-        <form action="{{ route('admin.usuarios.cadastrar') }}" method="post">
+
+        <form action="{{ route('cadastrosalvo') }}" method="post">
             @csrf
             <div class="cadastre-se">
 
@@ -48,11 +48,12 @@
                     <input type="password" id="passoword" name="password" placeholder="Senha" class="sen" />
 
                     <lable for="password_confirmation"></lable>
-                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirme sua senha" class="Confirme" />
+                    <input type="password" id="password_confirmation" name="password_confirmation"
+                        placeholder="Confirme sua senha" class="Confirme" />
                 </div>
 
                 <div>
-                    <a href="{{ route('cadastrosalvo') }}" class="gin">Salvar</a>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
 
 
                     <a href="cadastro-ongs.html" class="ONGS">Cadastro das ONGS</a>
