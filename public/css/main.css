@@ -1549,6 +1549,7 @@ label span {
     align-items: center;
     border: solid 2px #cc9cfa98;
     border-radius: 135px 50px 50px 135px;
+    margin: 35px 0px;
 }
 
 .dadosconteudo {
@@ -1697,6 +1698,21 @@ label span {
 .btnv {
     background-color: #50515325;
     width: 20%;
+    border-radius: 25px;
+    padding: 8px 0px;
+    text-align: center;
+    margin: 15px;
+}
+.dadosprincipaisuser{
+    margin-left: 85px;
+}
+.dadosprincipaisuser p{
+margin: 10px 0px;
+color: #2f2f2f;
+    font-size: clamp(16px, 2vw, 20px);
+}
+.btndedelete {
+    width: 500px;
     border-radius: 25px;
     padding: 8px 0px;
     text-align: center;

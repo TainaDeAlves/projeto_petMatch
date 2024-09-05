@@ -13,8 +13,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-       $usuarios = User::all();
-       return view('admin.usuarios.index', compact('usuarios'));
+       $users = User::all();
+       return view('admin.usuarios.index', compact('users'));
     }
     /**
      * Show the form for creating a new resource.
@@ -31,7 +31,7 @@ class UsuarioController extends Controller
     {
         $request->validate([
             'nome' => ' required',
-            'email' => 'required|string|email|unique:usuarios',
+            'email' => 'required|string|email|unique:users',
             'cidade'=> 'required|string',
             'estado'=> 'required|string',
             'password' => 'required|min:8|confirmed'
@@ -81,6 +81,13 @@ class UsuarioController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try {
+            $users = User::findOrFail($id);
+            $users->delete();
+            return redirect()->route('categoria.index')->with('sucesso', 'Categoria deletado com sucesso!!!');
+        } catch (\Exception $e) {
+
+            return redirect()->route('categoria.index')->with('error', 'Erro ao deletar o usuário');
+        }
     }
 }
