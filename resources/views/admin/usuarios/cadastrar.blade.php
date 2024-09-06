@@ -1,21 +1,21 @@
 @extends('layout.home')
 
-@section("conteudo")
-
-<header id="cabecalho" class="container paginainterna">
-    @include('includes.barratopo')
-
+@section('conteudo')
+    <header id="cabecalho" class="container paginainterna">
+        @include('includes.barratopo')
 
 
-</header>
 
-<main class="container" id="containeradotar">
-    
+    </header>
+
+    <body>
+        <main class="container" id="containeradotar">
 
 
-    @include('includes.nav_admin')
 
-    
-</main>
+            @yield('conteudo')
 
+        </main>
+        @include('includes.rodape')
+    </body>
 @endsection

@@ -19,6 +19,9 @@
         </div>
     </header>
     <main>
+        @section('conteudocadsatrar')
+            
+     
 
         @if (session('sucesso'))
             <div class="alert alert-success">
@@ -60,6 +63,7 @@
                 </div>
             </div>
         </form>
+        @endsection
     </main>
     @include('includes.rodape')
     <script src="{{ asset('./js/main.js') }}"></script>
