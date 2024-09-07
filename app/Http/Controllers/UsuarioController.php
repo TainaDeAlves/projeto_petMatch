@@ -52,10 +52,10 @@ class UsuarioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(string $id)
     {
-
-        return view('admin.usuarios.visualizar');
+        $user = User::findOrFail($id);
+        return view('admin.usuarios.visualizar', compact('user'));
  
 
     }
@@ -63,9 +63,10 @@ class UsuarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit(string $id)
     {
-        return view('admin.usuarios.editar');
+        $user = User::findOrFail($id);
+        return view('admin.usuarios.editar', compact('user'));
     }
 
     /**
@@ -73,7 +74,25 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'nome' => ' required',
+            'email' => 'required|string|email|unique:users,email,' . $id,
+            'cidade'=> 'required|string',
+            'estado'=> 'required|string',
+            'password' => 'nullable|min:8|confirmed'
+        ]);
+        $user = User::findOrFail($id);
+
+        $user->update([
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'cidade'=> $request->cidade,
+            'estado'=> $request->estado,
+            'password' => $request->password ? Hash::make($request->password) : $user->password
+        ]);
+
+
+        return redirect()->route('admin.usuarios.index')->with('sucesso', 'Usuário atulizado com sucesso');
     }
 
     /**

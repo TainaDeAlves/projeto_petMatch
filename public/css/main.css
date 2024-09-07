@@ -1219,12 +1219,13 @@ body {
 }
 
 #cadastropet label {
-    padding-right: 20px;
+   
     font-size: 1.2rem;
+  
 }
 
 label span {
-    margin-left: 5px;
+   
     color: var(--texto) !important;
 }
 
@@ -1259,9 +1260,6 @@ label span {
     cursor: pointer;
 }
 
-#informacoespetform p label{
-    margin-right: 25px;
-}
 
 #informacoespetform select {
     
@@ -1270,7 +1268,7 @@ label span {
     border-radius: 10px;
     outline: none;
     margin-bottom: 40px;
-    margin-left: -15px;
+  
 
 }
 
@@ -1717,4 +1715,8 @@ color: #2f2f2f;
     padding: 8px 0px;
     text-align: center;
     margin: 15px;
+}
+#informacoespetform label{
+        width: 100px !important;
+    display: inline-block;
 }

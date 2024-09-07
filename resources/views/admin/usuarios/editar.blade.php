@@ -13,108 +13,51 @@
 
     @include('includes.nav_admin')
 
-    <section class="naveconteudo">
+    @if (session('sucesso'))
+        <div class="alert alert-success">
+            {{ session('sucesso') }}
+        </div>
+    @endif
 
+    <form method="post" action="{{ route('usuario.update', ['id' => $user->id]) }}">
+        @csrf
+        @method('put')
+        <div class="cadastre-se">
 
+            <div class="cadastro">
+                <h1 class="texto1">Editar Usuário</h1>
+                <label for="nome"></label>
+                <input type="text" id="nome" name="nome" placeholder="Nome" class="name"
+                    value="{{ old('nome', $user->nome) }}">
 
-        <div class="listadoconteudo">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="E-mail" class="email"
+                    value="{{ old('nome', $user->email) }}">
 
+                <label for="cidade"></label>
+                <input type="text" id="cidade" name="cidade" placeholder="Cidade" class="city"
+                    value="{{ old('nome', $user->cidade) }}">
 
-            <div class="conteudo">
-                <div class="informacoes">
-                    <div class="borda">
-                        <div class="dadosconteudo">
-                            <div class="imgdocard">
-                                <img src="{{ asset('../img/Homem 1.png') }}" height="120">
-                            </div>
+                <label for="estado"></label>
+                <input type="text" id="estado" name="estado" placeholder="Estado" class="uf"
+                    value="{{ old('nome', $user->estado) }}">
 
-                            <div class="dadosprincipais">
-                                <p>ID:1</p>
-                                <p>Nome: Mario</p>
-                                <p>Email: mario@gmail.com</p>
-                                <p>Senha: *********</p>
-                                <p>Genero: Masculio</p>
-                                <p>Descrição: Olá! Meu nome é Mário e estou em busca de um novo amigo de quatro patas <br> para compartilhar minha vida. Sou um homem de 32 anos, apaixonado por animais e com um <br> grande amor pelos cães e gatos.</p>
-                            </div>
-                        </div>
-                        <div class="botoescrud">
-                            <div class="botaocrudv" > <a href="{{route('admin.usuarios.visualizar')}}">Visualizar</a>
-                            </div>
+                <label for="password"></label>
+                <input type="password" id="passoword" name="password" placeholder="Senha" class="sen">
 
-                            <div class="botaocrude"><a href="admin.usuarios.editar">Editar</a>
-                            </div>
-
-                            <div class="botaocrudex"><button name="" type="submit">Excluir</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="conteudo">
-
-                    <div class="borda">
-                        <div class="dadosconteudo">
-                            <div class="imgdocard">
-                                <img src="{{ asset('../img/Homem 1.png') }}" height="120">
-                            </div>
-
-                            <div class="dadosprincipais">
-                                <p>ID:1</p>
-                                <p>Nome: Mario</p>
-                                <p>Email: mario@gmail.com</p>
-                                <p>Senha: *********</p>
-                                <p>Genero: Masculio</p>
-                                <p>Descrição: Olá! Meu nome é Mário e estou em busca de um novo amigo de quatro patas <br> para compartilhar minha vida. Sou um homem de 32 anos, apaixonado por animais e com um <br> grande amor pelos cães e gatos.</p>
-                            </div>
-                        </div>
-                        <div class="botoescrud">
-                            <div class="botaocrudv"><a href="{{route('admin.usuarios.visualizar')}}">Visualizar</a>
-                            </div>
-
-                            <div class="botaocrude"><a href="{{route('admin.usuarios.editar')}}">Editar</a></div>
-
-                            <div class="botaocrudex"><button name="" type="submit">Excluir</button>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div class="conteudo">
-                        <div class="informacoes">
-                            <div class="borda">
-                          <div class="dadosconteudo">
-                            <div class="imgdocard">
-                              <img src="{{ asset('../img/Homem 1.png')}}" height="120">
-                            </div>
-            
-                            <div class="dadosprincipais">
-                                <p>ID:1</p>
-                                <p>Nome: Mario</p>
-                                <p>Email: mario@gmail.com</p>
-                                <p>Senha: *********</p>
-                                <p>Genero: Masculio</p>
-                                <p>Descrição: Olá! Meu nome é Mário e estou em busca de um novo amigo de quatro patas <br> para compartilhar minha vida. Sou um homem de 32 anos, apaixonado por animais e com um <br> grande amor pelos cães e gatos.</p>
-                            </div>
-                          </div>
-                          <div class="botoescrud">
-                            <div class="botaocrudv"> <a href="{{route("admin.usuarios.visualizar")}}">Visualizar</a>
-                            </div>
-            
-                            <div class="botaocrude"><a href="{{route("admin.usuarios.editar")}}">Editar</a>
-                            </div>
-            
-                            <div class="botaocrudex"><button name="" type="submit">Excluir</button>
-                            </div>
-            
-                          </div>
-                        </div>
-                        </div>
-
-                </div>
+                <lable for="password_confirmation"></lable>
+                <input type="password" id="password_confirmation" name="password_confirmation"
+                    placeholder="Confirme sua senha" class="Confirme">
             </div>
-    </section>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="{{ route('admin.usuarios.index') }}" class="btn btn-danger">Cancelar</a>
+
+
+            </div>
+        </div>
+    </form>
 
 </main>
 

@@ -44,8 +44,9 @@ Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('con
 
 //   admin usuario 
 Route::get("/admin/usuarios/index",[UsuarioController::class,"index"])->name("admin.usuarios.index");
-Route::get("/admin/usuarios/editar",[UsuarioController::class, "edit"])->name("admin.usuarios.editar");
+Route::get("/admin/usuarios/editar/{id}",[UsuarioController::class, "edit"])->name("admin.usuarios.editar");
 Route::get("/admin/usuarios/cadastrar", [UsuarioController::class, 'create'])->name("admin.usuarios.cadastrar");
-Route::get("/admin/usuarios/visualizar", [UsuarioController::class, "show"])->name("admin.usuarios.visualizar");
+Route::get("/admin/usuarios/visualizar/{id}", [UsuarioController::class, "show"])->name("admin.usuarios.visualizar");
 Route::post("/admin/cadastrarsalvar",[UsuarioController::class, "store"])->name("cadastrosalvo");
 Route::delete("/deletar/user/{id}", [UsuarioController::class,"destroy"])->name("delete.user"); 
+Route::put('admin/usuarios/editar/{id}',[UsuarioController::class, 'update'])->name('usuario.update');

@@ -19,7 +19,7 @@
         </div>
     </header>
     <main>
-        @section('conteudocadsatrar')
+       
             
      
 
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </form>
-        @endsection
+    
     </main>
     @include('includes.rodape')
     <script src="{{ asset('./js/main.js') }}"></script>
