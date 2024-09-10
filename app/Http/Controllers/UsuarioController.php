@@ -101,12 +101,12 @@ class UsuarioController extends Controller
     public function destroy(string $id)
     {
         try {
-            $users = User::findOrFail($id);
-            $users->delete();
-            return redirect()->route('categoria.index')->with('sucesso', 'Categoria deletado com sucesso!!!');
+            $user = User::findOrFail($id);
+            $user->delete();
+            return redirect()->route('admin.usuarios.index')->with('sucesso', 'Usuario deletado com sucesso!!!');
         } catch (\Exception $e) {
 
-            return redirect()->route('categoria.index')->with('error', 'Erro ao deletar o usuário');
+            return redirect()->route('.admin.usuarios.index')->with('error', 'Erro ao deletar o usuário');
         }
     }
 }

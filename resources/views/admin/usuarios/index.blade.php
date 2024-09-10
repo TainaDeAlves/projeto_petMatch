@@ -47,7 +47,8 @@
                                     style="display: inline-block">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-danger" class="btndedelete"
+                                   
+                                    <button type="submit" class="btn btn-danger" class="btndedelete" 
                                         onclick="return confirm('Realmente deseja exluir esse usúario ?')">Excluir</button>
                                 </form>
                             </div>

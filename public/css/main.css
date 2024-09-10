@@ -666,28 +666,27 @@ body {
 
 .texto1 {
     color: #A15BE2;
-    margin-left: 43%;
+    
     margin-bottom: 20px;
 
 }
 
 .cadastre-se {
-    background-color: #2f2f2f;
+ 
     height: 530px;
     padding-top: 30px;
     height: 650px;
+    margin-bottom: 15px;
 }
 
 
 .cadastro {
-    margin-left: 5%;
-
+    text-align: center;
+    margin: 0 auto;
 }
 
 
 .name {
-    display: block;
-    margin-left: 43%;
     margin-bottom: 30px;
     padding: 5px;
     border-radius: 10px;
@@ -696,65 +695,46 @@ body {
 
 
 .email {
-    display: block;
-    margin-left: 43%;
     margin-bottom: 30px;
     padding: 5px;
     border-radius: 10px;
     width: 300px;
+    
 }
 
 .city {
-    display: block;
-    margin-left: 43%;
     margin-bottom: 30px;
     padding: 5px;
     border-radius: 10px;
     width: 300px;
-
 }
 
 
 .uf {
-    display: block;
-    margin-left: 43%;
     margin-bottom: 30px;
     padding: 5px;
     border-radius: 10px;
     width: 300px;
-
 }
-
 
 .sen {
-    display: block;
-    margin-left: 43%;
     margin-bottom: 30px;
     padding: 5px;
     border-radius: 10px;
     width: 300px;
 
 }
-
-
 
 .Confirme {
-    display: block;
-    margin-left: 43%;
     margin-bottom: 30px;
     padding: 5px;
     border-radius: 10px;
     width: 300px;
-
 }
-
-
 
 .gin {
     text-align: center;
     background-color: #A15BE2;
-    display: block;
-    margin-left: 45.9%;
     margin-bottom: 30px;
     padding: 5px;
     border-radius: 10px;
@@ -764,17 +744,34 @@ body {
 }
 
 .ONGS {
-
     text-align: center;
     background-color: #A15BE2;
     color: white;
-    display: block;
-    margin-left: 45.9%;
     margin-bottom: 30px;
     padding: 5px;
     border-radius: 10px;
     width: 300px;
 
+}
+.btnuser{
+ text-align: center;
+}
+.btnuser button{
+    width: 18%;
+    padding: 8px 15px;
+  border-radius: 20px;
+  margin-bottom: 35px;
+
+}
+.botoescrud form button {
+    border: none;
+    background-color:#ff030370;
+    width: 140px;
+    border-radius: 25px;
+    padding: 8px 0px;
+    text-align: center;
+color: #ffffff;
+font-size: 16px;
 }
 
 /*login*/
@@ -1219,13 +1216,13 @@ body {
 }
 
 #cadastropet label {
-   
+
     font-size: 1.2rem;
-  
+
 }
 
 label span {
-   
+
     color: var(--texto) !important;
 }
 
@@ -1262,13 +1259,13 @@ label span {
 
 
 #informacoespetform select {
-    
+
     width: 25%;
     height: 32px;
     border-radius: 10px;
     outline: none;
     margin-bottom: 40px;
-  
+
 
 }
 
@@ -1277,7 +1274,8 @@ label span {
     justify-content: right;
     align-items: center;
 }
-.botaoformcadastrop a{
+
+.botaoformcadastrop a {
     background-color: #666666;
     border: none;
     padding: 10px 30px;
@@ -1286,7 +1284,8 @@ label span {
     font-size: 20px;
     margin: 35px;
 }
-.botaoformcadastrop button{
+
+.botaoformcadastrop button {
     background-color: var(--segundaria);
     border: none;
     padding: 10px 30px;
@@ -1574,13 +1573,11 @@ label span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
 }
 
 .botoescrud {
     height: 100%;
     width: 20%;
-
 }
 
 .botoescrud a {
@@ -1616,7 +1613,6 @@ label span {
     padding: 8px 0px;
     margin: 15px 0px;
     text-align: center;
-
 }
 
 .botaocrude {
@@ -1626,7 +1622,6 @@ label span {
     padding: 8px 0px;
     text-align: center;
     margin: 15px 0px;
-
 }
 
 .informacao {
@@ -1637,6 +1632,7 @@ label span {
     width: auto;
     margin: 35px 0px;
 }
+
 
 /* pet visualizar */
 .titulovisualizar h1 {
@@ -1701,14 +1697,17 @@ label span {
     text-align: center;
     margin: 15px;
 }
-.dadosprincipaisuser{
+
+.dadosprincipaisuser {
     margin-left: 85px;
 }
-.dadosprincipaisuser p{
-margin: 10px 0px;
-color: #2f2f2f;
+
+.dadosprincipaisuser p {
+    margin: 10px 0px;
+    color: #2f2f2f;
     font-size: clamp(16px, 2vw, 20px);
 }
+
 .btndedelete {
     width: 500px;
     border-radius: 25px;
@@ -1716,7 +1715,8 @@ color: #2f2f2f;
     text-align: center;
     margin: 15px;
 }
-#informacoespetform label{
-        width: 100px !important;
+
+#informacoespetform label {
+    width: 100px !important;
     display: inline-block;
 }

@@ -11,8 +11,6 @@
 </header>
 <main class="container" id="containeradotar">
 
-    @include('includes.nav_admin')
-
     @if (session('sucesso'))
         <div class="alert alert-success">
             {{ session('sucesso') }}
@@ -26,32 +24,44 @@
 
             <div class="cadastro">
                 <h1 class="texto1">Editar Usuário</h1>
-                <label for="nome"></label>
-                <input type="text" id="nome" name="nome" placeholder="Nome" class="name"
-                    value="{{ old('nome', $user->nome) }}">
+                <p>
+                    <input type="text" id="nome" name="nome" placeholder="Nome" class="name"
+                        value="{{ old('nome', $user->nome) }}">
+                </p>
 
-                <label for="email"></label>
-                <input type="email" id="email" name="email" placeholder="E-mail" class="email"
-                    value="{{ old('nome', $user->email) }}">
 
-                <label for="cidade"></label>
-                <input type="text" id="cidade" name="cidade" placeholder="Cidade" class="city"
-                    value="{{ old('nome', $user->cidade) }}">
+                <p>
+                    <input type="email" id="email" name="email" placeholder="E-mail" class="email"
+                        value="{{ old('nome', $user->email) }}">
+                </p>
 
-                <label for="estado"></label>
-                <input type="text" id="estado" name="estado" placeholder="Estado" class="uf"
-                    value="{{ old('nome', $user->estado) }}">
 
-                <label for="password"></label>
-                <input type="password" id="passoword" name="password" placeholder="Senha" class="sen">
+                <p>
+                    <input type="text" id="cidade" name="cidade" placeholder="Cidade" class="city"
+                        value="{{ old('nome', $user->cidade) }}">
+                </p>
 
-                <lable for="password_confirmation"></lable>
-                <input type="password" id="password_confirmation" name="password_confirmation"
-                    placeholder="Confirme sua senha" class="Confirme">
+
+                <p>
+                    <input type="text" id="estado" name="estado" placeholder="Estado" class="uf"
+                        value="{{ old('nome', $user->estado) }}">
+                </p>
+
+
+                <p>
+                    <input type="password" id="passoword" name="password" placeholder="Senha" class="sen">
+                </p>
+
+
+                <p>
+                    <input type="password" id="password_confirmation" name="password_confirmation"
+                        placeholder="Confirme sua senha" class="Confirme">
+                </p>
+
             </div>
 
-            <div>
-                <button type="submit" class="btn btn-primary">Salvar</button>
+            <div class="btnuser">
+                <button type="submit" class="btn btn-primary">Salvar</button><br>
                 <a href="{{ route('admin.usuarios.index') }}" class="btn btn-danger">Cancelar</a>
 
 
