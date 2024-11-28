@@ -20,7 +20,7 @@
                 </p>
                 <div class="botoes">
                     <div class="botao3">
-                        <a href="adote-um-amigo.html"> Adotar agora </a>
+                        <a href="{{route("adote")}}"> Adotar agora </a>
                     </div>
 
                     <div class="botao3">

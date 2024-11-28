@@ -34,12 +34,11 @@ Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('con
 
 
 //admin pets
- Route::get("/adminpet/visualizar", [PetsController::class,"show"])->name("pet.visualizar");
- 
- Route::post("/adminpet/store", [PetsController::class,"store"])->name("pet.store");
- Route::get("/adminpet/pdate", [PetsController::class,"update"])->name("pet.update");
- Route::get("admin/index",[PetsController::class, "index"])->name("index");
- Route::get("/pets", [PetsController::class, "create"])->name('pets');
+ Route::get("/admin/pet/visualizar/{id}", [PetsController::class,"show"])->name("pet.visualizar");
+ Route::post("/admin/pet/cadastrarsalvar", [PetsController::class,"store"])->name("pet.store");
+ Route::put("/admin/pet/editar/{id}", [PetsController::class,"update"])->name("pet.update");
+ Route::get("/admin/pet/index",[PetsController::class, "index"])->name("index");
+ Route::get("/admin/pets/cadastrar", [PetsController::class, "create"])->name('pets');
  
 
 //   admin usuario 
@@ -47,6 +46,6 @@ Route::get("/admin/usuarios/index",[UsuarioController::class,"index"])->name("ad
 Route::get("/admin/usuarios/editar/{id}",[UsuarioController::class, "edit"])->name("admin.usuarios.editar");
 Route::get("/admin/usuarios/cadastrar", [UsuarioController::class, 'create'])->name("admin.usuarios.cadastrar");
 Route::get("/admin/usuarios/visualizar/{id}", [UsuarioController::class, "show"])->name("admin.usuarios.visualizar");
-Route::post("/admin/cadastrarsalvar",[UsuarioController::class, "store"])->name("cadastrosalvo");
-Route::delete("/deletar/user/{id}", [UsuarioController::class,"destroy"])->name("delete.user"); 
+Route::post("/admin/usuarios/cadastrarsalvar",[UsuarioController::class, "store"])->name("cadastrosalvo");
+Route::delete("/admin/usuarios/deletar/{id}", [UsuarioController::class,"destroy"])->name("delete.user"); 
 Route::put('admin/usuarios/editar/{id}',[UsuarioController::class, 'update'])->name('usuario.update');

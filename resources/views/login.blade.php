@@ -11,7 +11,7 @@
                 <p>Descubra a felicidade em quatro patas!</p>
                 <p>Escolha seu novo amigo e preencha sua vida com amor e lealdade incondicionais.</p>
 
-                <a href="#" class="botao-adotar">
+                <a href="{{route('adote')}}" class="botao-adotar">
                     Adotar agora
                 </a>
             </div>
@@ -31,7 +31,7 @@
                 
 
             </div>
-            <a href="index.html" class="gin">Entrar</a>
+            <a href="{{route("home")}}" class="gin">Entrar</a>
         </div>
 
 
