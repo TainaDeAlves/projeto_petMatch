@@ -46,7 +46,7 @@ class PetsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.pets.editar');
     }
 
     /**

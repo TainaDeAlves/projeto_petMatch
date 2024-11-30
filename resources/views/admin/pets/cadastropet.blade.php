@@ -15,7 +15,7 @@
 
             <p class="aviso">Campos com * são obrigatorios</p>
 
-            <form method="post" action="{{ isset($pet) ? route('pet.update', $pet->id) : route('pet.store') }}" id="cadastropet" enctype="multipart/form-data">
+            <form method="post" action="{{ isset($pet) ? route('pet.update', $pet->id) : route('admin.pets.cadastrar') }}" id="cadastropet" enctype="multipart/form-data">
                 @csrf
                 @if(isset($pet))
                     @method('PUT')

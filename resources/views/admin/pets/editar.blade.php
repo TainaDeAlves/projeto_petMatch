@@ -39,7 +39,7 @@
                             <div class="botaocrudv" > <a href="">Visualizar</a>
                             </div>
 
-                            <div class="botaocrude"><a href="">Editar</a>
+                            <div class="botaocrude"><a href="{{route("admin.pets.editar")}}">Editar</a>
                             </div>
 
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>
@@ -68,7 +68,7 @@
                             <div class="botaocrudv"><a href="{{route('pet.visualizar')}}">Visualizar</a>
                             </div>
 
-                            <div class="botaocrude"><a href="{{route('pets')}}">Editar</a></div>
+                            <div class="botaocrude"><a href="{{route('admin.pets.editar')}}">Editar</a></div>
 
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>
                             </div>
@@ -96,7 +96,7 @@
                             <div class="botaocrudv"> <a href="">Visualizar</a>
                             </div>
             
-                            <div class="botaocrude"><a href="">Editar</a>
+                            <div class="botaocrude"><a href="{{route("admin.pets.editar")}}">Editar</a>
                             </div>
             
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>
