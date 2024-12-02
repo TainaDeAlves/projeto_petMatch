@@ -7,13 +7,16 @@
     @include('includes.barratopo')
 
 
-
+    
 </header>
 <main class="container" id="containeradotar">
-
+    
     @include('includes.nav_admin')
-
+    
     <section class="naveconteudo">
+        <form action="{{ route('admin.pets.editar', $pet->id) }}" method="POST">
+            @csrf
+            @method('PUT')
 
 
 
@@ -36,7 +39,7 @@
                             </div>
                         </div>
                         <div class="botoescrud">
-                            <div class="botaocrudv" > <a href="">Visualizar</a>
+                            <div class="botaocrudv" > <a href="{{route("admin.pets.visualizar")}}">Visualizar</a>
                             </div>
 
                             <div class="botaocrude"><a href="{{route("admin.pets.editar")}}">Editar</a>
@@ -65,7 +68,7 @@
                             </div>
                         </div>
                         <div class="botoescrud">
-                            <div class="botaocrudv"><a href="{{route('pet.visualizar')}}">Visualizar</a>
+                            <div class="botaocrudv"><a href="{{route('admin.pets.visualizar')}}">Visualizar</a>
                             </div>
 
                             <div class="botaocrude"><a href="{{route('admin.pets.editar')}}">Editar</a></div>
@@ -93,7 +96,7 @@
                             </div>
                           </div>
                           <div class="botoescrud">
-                            <div class="botaocrudv"> <a href="">Visualizar</a>
+                            <div class="botaocrudv"> <a href="{{route('admin.pets.visualizar')}}">Visualizar</a>
                             </div>
             
                             <div class="botaocrude"><a href="{{route("admin.pets.editar")}}">Editar</a>
@@ -108,6 +111,7 @@
 
                 </div>
             </div>
+        </form>
     </section>
 
 </main>

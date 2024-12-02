@@ -74,7 +74,7 @@
         <div class="botoes">
             <div class="btncrud">
 
-                <div class="btne"><a href="{{route('pets')}}">Editar</a></div>
+                <div class="btne"><a href="{{route('admin.pets.editar')}}">Editar</a></div>
 
                 <div class="btnv"><a href="{{route('index')}}">Cancelar</a></div>
 

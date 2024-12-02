@@ -102,7 +102,7 @@
                 </div>
             
                 <div class="botaoformcadastrop">
-                    <a href="{{ isset($pet) ? '/admin/index' : '/' }}" class="btn btn-secondary">Cancelar</a>
+                    <a href="{{ isset($pet) ? 'admin.pets.index' : 'index' }}" class="btn btn-secondary">Cancelar</a>
                     <button type="submit" name="cadastrarpet">{{ isset($pet) ? 'Atualizar' : 'Cadastrar' }}</button>
                 </div>
             </form>

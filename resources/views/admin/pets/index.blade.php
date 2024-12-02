@@ -25,7 +25,7 @@
                     <div class="borda">
                         <div class="dadosconteudo">
                             <div class="imgdocard">
-                                <img src="{{ asset('../img/73997.jpg') }}" height="120">
+                                <img src="{{ asset('./img/73997.jpg') }}" height="120">
                             </div>
 
                             <div class="dadosprincipais">
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="botoescrud">
-                            <div class="botaocrudv" > <a href="">Visualizar</a>
+                            <div class="botaocrudv" > <a href="{{route("admin.pets.visualizar")}}">Visualizar</a>
                             </div>
 
                             <div class="botaocrude"><a href="{{route("admin.pets.editar")}}">Editar</a>
@@ -93,7 +93,7 @@
                             </div>
                           </div>
                           <div class="botoescrud">
-                            <div class="botaocrudv"> <a href="">Visualizar</a>
+                            <div class="botaocrudv"> <a href="{{route('admin.pets.visualizar')}}">Visualizar</a>
                             </div>
             
                             <div class="botaocrude"><a href="{{route("admin.pets.editar")}}">Editar</a>
