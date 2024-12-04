@@ -125,8 +125,8 @@ class PetsController extends Controller
         // Atualiza o pet com os dados validados
         $pet->update($validated);
     
-           if ($request->hasFile('foto')) {
-                foreach ($request->file('foto') as $file) {
+           if ($request->hasFile('fotos')) {
+                foreach ($request->file('fotos') as $file) {
                 $fotoPath = $file->store('fotos', 'public');
                 Foto::create([
                     'pet_id' => $pet->id,  
