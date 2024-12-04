@@ -11,17 +11,28 @@ class Pet extends Model
        use HasFactory;
 
     protected $fillable = [
-        'nome',
-        'raca',
-        'porte',
-        'idade',
-        'destaque',
-        'segundo_destaque',
-        'terceiro_destaque',
-        'descricao',
-        'localizacao',
-        'usuario_id',
-        'ongs_id',
+        'nome_doador',
+            'contato_doador',
+            'estado_doador',
+            'cidade_doador',
+
+            // Dados do Pet
+            'nome',
+            'especie',
+            'raca',
+            'sexo',
+            'porte',
+            'idade' ,
+
+            // Destaques
+            'destaque_um' ,
+            'destaque_dois',
+            'destaque_tres' ,
+
+            // Descrição
+            'descricao',
+
+           
     ];
 
 
@@ -35,10 +46,6 @@ public function ong()
     return $this->belongsTo(Ong::class, 'ongs_id');
 }
 
-public function foto()
-{
-return $this->belongsTo(Fotos::class, 'foto_id');
-}
 
     
 }

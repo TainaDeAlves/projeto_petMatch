@@ -1,9 +1,10 @@
-<?php
-
+<?php 
 namespace App\Http\Controllers;
 
 use App\Models\Pet;
 use Illuminate\Http\Request;
+use App\Models\Foto;
+use App\Models\Fotos;
 
 class PetsController extends Controller
 {
@@ -29,22 +30,48 @@ class PetsController extends Controller
      */
     public function store(Request $request)
     {
+        // Validação dos dados do pet
         $validated = $request->validate([
+            // Dados do Doador
+            'nome_doador' => 'required|string|max:255',
+            'contato_doador' => 'required|string|max:255',
+            'estado_doador' => 'required|string|max:255',
+            'cidade_doador' => 'required|string|max:255',
+    
+            // Dados do Pet
             'nome' => 'required|string|max:255',
+            'especie' => 'required|string|max:50',
             'raca' => 'required|string|max:255',
+            'sexo' => 'required|string|max:1',
             'porte' => 'required|string|max:50',
             'idade' => 'required|string|max:50',
-            'destaque' => 'required|string|max:255',
-            'segundo_destaque' => 'nullable|string|max:255',
-            'terceiro_destaque' => 'nullable|string|max:255',
+    
+            // Destaques
+            'destaque_um' => 'required|string|max:255',
+            'destaque_dois' => 'nullable|string|max:255',
+            'destaque_tres' => 'nullable|string|max:255',
+    
+            // Descrição
             'descricao' => 'required|string',
-            'localizacao' => 'required|string|max:255',
-            'usuario_id' => 'required|exists:users,id',
-            'ongs_id' => 'required|exists:ongs,id',
+
+        
         ]);
-
-        Pet::create($validated);
-
+    
+        // Criação do pet com os dados validados
+        $pet = Pet::create($validated);
+    
+        if ($request->hasFile('fotos')) {
+            foreach ($request->file('fotos') as $file) {
+                $caminhoFoto = $file->store('fotos','public');
+                Foto::create([
+                    'pet_id'=> $pet->id,
+                    'imagem'=> $caminhoFoto
+                ]);
+            }
+        }
+            
+    
+        // Redireciona para a página de listagem de pets com uma mensagem de sucesso
         return redirect()->route('admin.pets.index')->with('success', 'Pet criado com sucesso!');
     }
 
@@ -69,27 +96,48 @@ class PetsController extends Controller
      */
     public function update(Request $request, Pet $pet)
     {
+        // Validação dos dados do pet
         $validated = $request->validate([
+            // Dados do Doador
+            'nome_doador' => 'required|string|max:255',
+            'contato_doador' => 'required|string|max:255',
+            'estado_doador' => 'required|string|max:255',
+            'cidade_doador' => 'required|string|max:255',
+    
+            // Dados do Pet
             'nome' => 'required|string|max:255',
+            'especie' => 'required|string|max:50',
             'raca' => 'required|string|max:255',
+            'sexo' => 'required|string|max:1',
             'porte' => 'required|string|max:50',
             'idade' => 'required|string|max:50',
-            'destaque' => 'required|string|max:255',
-            'segundo_destaque' => 'nullable|string|max:255',
-            'terceiro_destaque' => 'nullable|string|max:255',
+    
+            // Destaques
+            'destaque_um' => 'required|string|max:255',
+            'destaque_dois' => 'nullable|string|max:255',
+            'destaque_tres' => 'nullable|string|max:255',
+    
+            // Descrição
             'descricao' => 'required|string',
-            'localizacao' => 'required|string|max:255',
-            'usuario_id' => 'required|exists:users,id',
-            'ongs_id' => 'required|exists:ongs,id',
+
         ]);
-
+    
+        // Atualiza o pet com os dados validados
         $pet->update($validated);
-        $pet->update($request->all());
-
-
+    
+           if ($request->hasFile('foto')) {
+                foreach ($request->file('foto') as $file) {
+                $fotoPath = $file->store('fotos', 'public');
+                Foto::create([
+                    'pet_id' => $pet->id,  
+                    'imagem' => $fotoPath 
+                ]);
+            }
+        }
+    
+        // Redireciona para a página de listagem de pets com uma mensagem de sucesso
         return redirect()->route('admin.pets.index')->with('success', 'Pet atualizado com sucesso!');
     }
-
     /**
      * Remove um pet do banco de dados.
      */

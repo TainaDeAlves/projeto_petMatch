@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('fotos', function (Blueprint $table) {
             $table->id();
             $table->string("imagem");
-            $table->string('pets_id');
-            $table->rememberToken();
+            $table->foreignId('pet_id')->constraint('pets');
+          
             $table->timestamps();
         });
     }

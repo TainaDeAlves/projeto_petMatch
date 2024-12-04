@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fotos extends Model
+class Foto extends Model
 {
     use HasFactory;
 
@@ -14,7 +14,7 @@ class Fotos extends Model
      */
     protected $fillable = [
         'imagem',
-        'pets_id',
+        'pet_id',
     ];
 
     /**
