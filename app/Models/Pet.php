@@ -46,6 +46,8 @@ public function ong()
     return $this->belongsTo(Ong::class, 'ongs_id');
 }
 
-
+ public function fotos(){
+    return $this->hasMany(Foto::class);
+ }
     
 }

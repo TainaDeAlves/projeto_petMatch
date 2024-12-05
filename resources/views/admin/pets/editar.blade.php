@@ -21,7 +21,9 @@
 
 
         <div class="listadoconteudo">
-
+            @foreach ($pets as $pet)
+                
+            
 
             <div class="conteudo">
                 <div class="informacoes">
@@ -32,10 +34,10 @@
                             </div>
 
                             <div class="dadosprincipais">
-                                <p>ID:1</p>
-                                <p>Nome: Bob</p>
-                                <p>Sexo: Macho</p>
-                                <p>Descrição: É um cachorro muito dócil e alegre, que esta em busca de nova família</p>
+                                <p>ID:{{$pet->id}}</p>
+                                <p>Nome: {{$pet->nome}}</p>
+                                <p>Sexo: {{$pet->sexo}}</p>
+                                <p>Descrição: {{$pet->descricao}}</p>
                             </div>
                         </div>
                         <div class="botoescrud">
@@ -51,8 +53,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="conteudo">
+            @endforeach
+
+                {{-- <div class="conteudo">
 
                     <div class="borda">
                         <div class="dadosconteudo">
@@ -110,7 +115,7 @@
                         </div>
 
                 </div>
-            </div>
+            </div> --}}
         </form>
     </section>
 

@@ -35,7 +35,7 @@ Route::get("/contato", [PaginasEstaticaController::class, "contato"])->name('con
 
 //admin pets
 Route::get("/admin/pets/index",[PetsController::class, "index"])->name("admin.pets.index");
- Route::get("/admin/pets/visualizar", [PetsController::class,"show"])->name("admin.pets.visualizar");
+ Route::get("/admin/pets/visualizar/{id}", [PetsController::class,"show"])->name("admin.pets.visualizar");
  Route::post("/admin/pets/cadastrar/salvar", [PetsController::class,"store"])->name("admin.pets.cadastrar.salvar");
  Route::put("/admin/pets/editar", [PetsController::class,"update"])->name("admin.pets.editar");
  Route::get("/admin/pets/editar", [PetsController::class,"update"])->name("admin.pets.editar");

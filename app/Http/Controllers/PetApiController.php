@@ -1,33 +1,34 @@
-<?php 
+<?php
+
 namespace App\Http\Controllers;
 
-use App\Models\Pet;
-use Illuminate\Http\Request;
 use App\Models\Foto;
-use App\Models\Fotos;
+use Illuminate\Http\Request;
+use App\Models\Pet;
+use Exception;
+use App\Http\Controllers\Controller;
 
-class PetsController extends Controller
+class PetApiController extends Controller
 {
-    /**
-     * Exibe a lista de todos os pets.
-     */
     public function index()
     {
-        $pets = Pet::with(['usuario', 'ong'])->get(); // Certifica-se de carregar as relações
-        return view('admin.pets.index', compact('pets'));
+        $pets = Pet::with(['usuario', 'ong'])->get(); 
+        try {
+            return response()->json($pets, 200);
+        } catch (Exception $e) {
+            return response()->json(["Erro" => "Erro Ao Listar Os Pets"], 500);
+        }
     }
 
-    /**
-     * Exibe o formulário para criar um novo pet.
-     */
-    public function create()
+    public function show(Pet $pet)  // Alterado de $id para $pet
     {
-        return view('admin.pets.cadastrar');
+        try {
+            return response()->json($pet, 200);  // $pet já é uma instância do modelo
+        } catch (Exception $e) {
+            return response()->json(["Erro" => "Pet Não Encontrado"], 404);
+        }
     }
 
-    /**
-     * Armazena um novo pet no banco de dados.
-     */
     public function store(Request $request)
     {
         // Validação dos dados do pet
@@ -37,7 +38,7 @@ class PetsController extends Controller
             'contato_doador' => 'required|string|max:255',
             'estado_doador' => 'required|string|max:255',
             'cidade_doador' => 'required|string|max:255',
-    
+
             // Dados do Pet
             'nome' => 'required|string|max:255',
             'especie' => 'required|string|max:50',
@@ -45,59 +46,34 @@ class PetsController extends Controller
             'sexo' => 'required|string|max:1',
             'porte' => 'required|string|max:50',
             'idade' => 'required|string|max:50',
-    
+
             // Destaques
             'destaque_um' => 'required|string|max:255',
             'destaque_dois' => 'nullable|string|max:255',
             'destaque_tres' => 'nullable|string|max:255',
-    
+
             // Descrição
             'descricao' => 'required|string',
-
-        
         ]);
-    
+
         // Criação do pet com os dados validados
         $pet = Pet::create($validated);
-    
+
+        // Se o request contiver arquivos de fotos
         if ($request->hasFile('fotos')) {
-        
-       
-            
             foreach ($request->file('fotos') as $file) {
-               
-                $caminhoFoto = $file->store('fotos','public');
+                $caminhoFoto = $file->store('fotos', 'public');
                 Foto::create([
-                    'pet_id'=> $pet->id,
-                    'imagem'=> $caminhoFoto
+                    'pet_id' => $pet->id,
+                    'imagem' => $caminhoFoto
                 ]);
             }
         }
-            
-    
-        // Redireciona para a página de listagem de pets com uma mensagem de sucesso
-        return redirect()->route('admin.pets.index')->with('success', 'Pet criado com sucesso!');
+
+        // Retorna resposta JSON com mensagem de sucesso
+        return response()->json(['message' => 'Cadastro realizado com sucesso!', 'pets' => $pet], 201);
     }
 
-    /**
-     * Exibe os detalhes de um pet específico.
-     */
-    public function show(Pet $id)
-    {
-        return view('admin.pets.visualizar', compact('pet'));
-    }
-
-    /**
-     * Exibe o formulário para editar um pet.
-     */
-    public function edit(Pet $pet)
-    {
-        return view('admin.pets.editar', compact('pet'));
-    }
-
-    /**
-     * Atualiza os dados de um pet no banco de dados.
-     */
     public function update(Request $request, Pet $pet)
     {
         // Validação dos dados do pet
@@ -107,7 +83,7 @@ class PetsController extends Controller
             'contato_doador' => 'required|string|max:255',
             'estado_doador' => 'required|string|max:255',
             'cidade_doador' => 'required|string|max:255',
-    
+
             // Dados do Pet
             'nome' => 'required|string|max:255',
             'especie' => 'required|string|max:50',
@@ -115,46 +91,41 @@ class PetsController extends Controller
             'sexo' => 'required|string|max:1',
             'porte' => 'required|string|max:50',
             'idade' => 'required|string|max:50',
-    
+
             // Destaques
             'destaque_um' => 'required|string|max:255',
             'destaque_dois' => 'nullable|string|max:255',
             'destaque_tres' => 'nullable|string|max:255',
-    
+
             // Descrição
             'descricao' => 'required|string',
-
         ]);
-    
+
         // Atualiza o pet com os dados validados
         $pet->update($validated);
-    
-       
+
+        // Se o request contiver arquivos de fotos
         if ($request->hasFile('fotos')) {
-        
-       
-            
             foreach ($request->file('fotos') as $file) {
-               
-                $caminhoFoto = $file->store('fotos','public');
+                $caminhoFoto = $file->store('fotos', 'public');
                 Foto::create([
-                    'pet_id'=> $pet->id,
-                    'imagem'=> $caminhoFoto
+                    'pet_id' => $pet->id,
+                    'imagem' => $caminhoFoto
                 ]);
             }
         }
-            
-    
-        // Redireciona para a página de listagem de pets com uma mensagem de sucesso
-        return redirect()->route('admin.pets.index')->with('success', 'Pet atualizado com sucesso!');
+
+        // Retorna resposta JSON com mensagem de sucesso
+        return response()->json(['message' => 'Atualização realizada com sucesso!', 'pets' => $pet], 200);
     }
-    /**
-     * Remove um pet do banco de dados.
-     */
+
     public function destroy(Pet $pet)
     {
-        $pet->delete();
-
-        return redirect()->route('admin.pets.index')->with('success', 'Pet excluído com sucesso!');
+        try {
+            $pet->delete(); // Remove o pet diretamente
+            return response()->json(["mensagem" => "Pet deletado com sucesso"], 200);
+        } catch (Exception $e) {
+            return response()->json(["error" => "Erro ao deletar o Pet"], 500);
+        }
     }
 }
