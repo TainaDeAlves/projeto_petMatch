@@ -48,8 +48,7 @@
                             <div class="botaocrude"><a href="{{ route('admin.pets.editar') }}">Editar</a>
                             </div>
 
-                            <div class="botaocrudex"><button name="" type="submit">Excluir</button>
-                            </div>
+                            <div class="botaocrudex"><button name="" type="submit">Excluir</button></div>
 
                         </div>
                     </div>

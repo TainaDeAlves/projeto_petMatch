@@ -1,13 +1,13 @@
 <footer class="rodape">
     <div class="logo">
-        <img src="{{ asset('../img/logo3.png')}}" alt="" width="200" />
+        <img src="{{ asset('./img/logo3.png')}}" alt="" width="200" />
         <a href="#" class="texto">A plataforma que <br />
             une corações e patinhas.</a>
 
-        <a href="#"><img src="{{asset('../img/facebook.png')}}" alt="facebok" class="imgf" /></a>
-        <a href="#"><img src="{{asset('../img/instagram.png')}}" alt="instagram" /></a>
-        <a href="#"><img src="{{asset('../img/twiter.png')}}" alt="twiter" /></a>
-        <a href="#"><img src="{{asset('../img/linkedin.png')}}" alt="linkedin" /></a>
+        <a href="#"><img src="{{asset('./img/facebook.png')}}" alt="facebok" class="imgf" /></a>
+        <a href="#"><img src="{{asset('./img/instagram.png')}}" alt="instagram" /></a>
+        <a href="#"><img src="{{asset('./img/twiter.png')}}" alt="twiter" /></a>
+        <a href="#"><img src="{{asset('./img/linkedin.png')}}" alt="linkedin" /></a>
 
 
     </div>
@@ -35,7 +35,7 @@
 
     <div class="baixe-apps">
         <h4>Baixe o nosso app</h4>
-        <img src="{{asset('../img/playstore.png')}}" alt="playstore" />
-        <img src="{{asset('../img/appstore.png')}}" alt="appstore" />
+        <img src="{{asset('./img/playstore.png')}}" alt="playstore" />
+        <img src="{{asset('./img/appstore.png')}}" alt="appstore" />
     </div>
 </footer>

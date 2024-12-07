@@ -2,7 +2,7 @@
 <section id="navadmin">
 
     <div class="gato">
-        <img src={{ asset('../img/file.png') }} height="250">
+        <img src={{ asset('./img/file.png') }} height="250">
     </div>
     <div class="listaflitro">
         <ul>

@@ -12,7 +12,18 @@ class PetApiController extends Controller
 {
     public function index()
     {
-        $pets = Pet::with(['usuario', 'ong'])->get(); 
+        $pets = Pet::with(['usuario', 'ong', 'fotos'])->get(); 
+
+         
+        $pets = Pet::with('fotos')->get();
+        $pets = $pets->map(function ($pets){
+          $pets->fotos[0]->imagem = asset("storage/".$pets->fotos[0]->imagem);
+          return $pets;
+        });
+        
+
+
+
         try {
             return response()->json($pets, 200);
         } catch (Exception $e) {

@@ -13,6 +13,7 @@ class PetsController extends Controller
      */
     public function index()
     {
+
         $pets = Pet::with(['usuario', 'ong'])->get(); // Certifica-se de carregar as relações
         return view('admin.pets.index', compact('pets'));
     }
@@ -82,7 +83,7 @@ class PetsController extends Controller
     /**
      * Exibe os detalhes de um pet específico.
      */
-    public function show(Pet $id)
+    public function show(Pet $pet)
     {
         return view('admin.pets.visualizar', compact('pet'));
     }
