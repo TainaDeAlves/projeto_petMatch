@@ -56,7 +56,7 @@
                         @for ($i = 0; $i < 3; $i++)
                             <div class="inseririmg">
                                 <img src="{{ isset($pet->images[$i]) ? asset($pet->images[$i]) : asset('./img/pet_7104394.png') }}" alt="Imagem" id="imagem{{ $i }}" onclick="document.getElementById('inputImagem{{ $i }}').click()">
-                                <input type="file" id="inputImagem{{ $i }}" name="images[]" accept="image/*" style="display: none;" data-imagemid="imagem{{ $i }}">
+                                <input type="file" id="inputImagem{{ $i }}" name="fotos[]" accept="image/*" style="display: none;" data-imagemid="imagem{{ $i }}">
                             </div>
                         @endfor
                     </div>
@@ -113,12 +113,12 @@
                         <textarea name="descricao" id="descricao" cols="50" rows="12">{{ old('descricao', $pet->descricao ?? '') }}</textarea>
                     </div>
 
-                    <div class="bloco-foto">
+                    <!-- <div class="bloco-foto">
                         <p class="fotos">Foto: *</p>
                         <label for="fotos">Foto:</label>
                         <input type="file" name="fotos[]" id="fotos" multiple>
                      
-                    </div>
+                    </div> -->
 
                     
 
