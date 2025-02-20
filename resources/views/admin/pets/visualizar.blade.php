@@ -33,7 +33,7 @@
             <ul class="listadedados">
 
                 <div class="dadosuser">
-                    <li><strong>Nome do pet:</strong> Bob</li>
+                    <li><strong>Nome do pet:</strong>{{$pet->nome}}</li>
                     <li><strong>Sexo:</strong> Macho</li>
                     <li> <strong>Raça:</strong> Golden retriever</li>
                     <li><strong>Localização:</strong> Marilia-SP</li>
@@ -44,12 +44,14 @@
                 <div class="sobreopet">
                     <h2><strong>Destaque:</strong></h2>
 
+     
+
                     <div class="destaquepet">
 
-                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>Alegre</strong></p>
-                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>Compangeiro</strong>
+                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>{{ $pet->destaque_um }}</strong></p>
+                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>{{$pet->destaque_dois}}</strong>
                         </p>
-                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>Amigavel</strong> </p>
+                        <p><i class="fa-solid fa-paw fa-xl" style="color: #B197FC;"></i> <strong>{{$pet->destaque_tres}}</strong> </p>
 
                     </div>
                 </div>
@@ -58,7 +60,7 @@
             </ul>
 <section class="sobreopet">
             <div class="descricaopetperfil">
-                <p class="nomepetperfil"><span> Sobre o Bob</span> </p>
+                <p class="nomepetperfil"><span> {{$pet->nome}}</span> </p>
 
                 <p class="historia"> Sou muito alegre e companheiro, adoro passear e claro gosto muito de brincar na
                     agua Sou muito alegre
@@ -74,7 +76,7 @@
         <div class="botoes">
             <div class="btncrud">
 
-                <div class="btne"><a href="{{route('admin.pets.editar')}}">Editar</a></div>
+                <div class="btne"><a href="{{route('admin.pets.cadastrar')}}">Editar</a></div>
 
                 <div class="btnv"><a href="{{route('admin.pets.index')}}">Cancelar</a></div>
 

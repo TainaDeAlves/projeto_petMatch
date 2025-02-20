@@ -15,7 +15,7 @@
         incondicionais.
       </p>
 
-      <a href="{{route("adote")}}" class="botao-adotar"> Adotar agora </a>
+      <a href="{{route('adote')}}" class="botao-adotar"> Adotar agora </a>
     </div>
   </div>
 </header>

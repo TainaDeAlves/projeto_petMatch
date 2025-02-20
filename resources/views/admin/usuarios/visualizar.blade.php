@@ -44,7 +44,7 @@
 
                 <div class="btne"><a href="{{route('admin.usuarios.editar',['id' => $user->id])}}">Editar</a></div>
 
-                <div class="btnv"><a href="{{route("admin.usuarios.index")}}">Cancelar</a></div>
+                <div class="btnv"><a href="{{route('admin.usuarios.index')}}">Cancelar</a></div>
             </div>
 
         </div>

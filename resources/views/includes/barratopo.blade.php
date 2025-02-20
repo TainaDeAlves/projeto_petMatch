@@ -1,6 +1,6 @@
 <div class="barratopo">
     <div id="logo">
-      <img src="{{asset("./img/logo3.png")}}" alt="logo" width="150" />
+      <img src="{{asset('./img/logo3.png')}}" alt="logo" width="150" />
     </div>
 
     <nav id="menu">
@@ -30,6 +30,6 @@
 
     <div id="botao">
       <a href="{{route('usuario')}}">Cadastre-se</a>
-      <a href="login.html">Login</a>
+      <a href="{{route('login')}}">Login</a>
     </div>
   </div>

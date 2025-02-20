@@ -35,16 +35,16 @@
 
                             <div class="dadosprincipais">
                                 <p>ID:{{$pet->id}}</p>
-                                <p>Nome: {{$pet->nome}}</p>
+                                <p>Nome:{{$pet->nome}}</p>
                                 <p>Sexo: {{$pet->sexo}}</p>
                                 <p>Descrição: {{$pet->descricao}}</p>
                             </div>
                         </div>
                         <div class="botoescrud">
-                            <div class="botaocrudv" > <a href="{{route("admin.pets.visualizar")}}">Visualizar</a>
+                            <div class="botaocrudv" > <a href="{{route('admin.pets.visualizar')}}">Visualizar</a>
                             </div>
 
-                            <div class="botaocrude"><a href="{{route("admin.pets.editar")}}">Editar</a>
+                            <div class="botaocrude"><a href="{{route('admin.pets.editar',['id'=>$pet->id])}}">Editar</a>
                             </div>
 
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>
@@ -66,10 +66,10 @@
                             </div>
 
                             <div class="dadosprincipais">
-                                <p>ID:1</p>
-                                <p>Nome: Bob</p>
-                                <p>Sexo: Macho</p>
-                                <p>Descrição: É umca de nova famíliaÉ um cachorro muito dócil e alegre, que esta em busca de nova família</p>
+                                <p>ID:{{$pet->id}}</p>
+                                <p>Nome: {{$pet->nome}}</p>
+                                <p>Sexo: {{$pet->sexo}}</p>
+                                <p>Descrição:{{$pet->descricao}}/p>
                             </div>
                         </div>
                         <div class="botoescrud">
@@ -94,7 +94,7 @@
                             </div>
             
                             <div class="dadosprincipais">
-                                <p>ID:1</p>
+                                <p>ID:{{$pet->id}}</p>
                                 <p>Nome: Bob</p>
                                 <p>Sexo: Macho</p>
                                 <p>Descrição: É um cachorro muito dócil e alegre, que esta em busca de nova família</p>
@@ -104,7 +104,7 @@
                             <div class="botaocrudv"> <a href="{{route('admin.pets.visualizar')}}">Visualizar</a>
                             </div>
             
-                            <div class="botaocrude"><a href="{{route("admin.pets.editar")}}">Editar</a>
+                            <div class="botaocrude"><a href="{{route('admin.pets.editar')}}">Editar</a>
                             </div>
             
                             <div class="botaocrudex"><button name="" type="submit">Excluir</button>

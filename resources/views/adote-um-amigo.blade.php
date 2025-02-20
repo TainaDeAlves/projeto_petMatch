@@ -87,7 +87,7 @@
                 <div class="acessarperfil">
                     <div class="dadospet">
                         <div class="fundoroxo">
-                            <a href="perfilpet.html">
+                            <a href="{{route('perfil')}}">
 
                                 <div class="fotopet">
                                     <img src="{{ asset('./img/golden retriever.jpg') }}">

@@ -113,13 +113,6 @@
                         <textarea name="descricao" id="descricao" cols="50" rows="12">{{ old('descricao', $pet->descricao ?? '') }}</textarea>
                     </div>
 
-                    <!-- <div class="bloco-foto">
-                        <p class="fotos">Foto: *</p>
-                        <label for="fotos">Foto:</label>
-                        <input type="file" name="fotos[]" id="fotos" multiple>
-                     
-                    </div> -->
-
                     
 
 

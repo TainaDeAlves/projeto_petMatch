@@ -17,7 +17,7 @@ class PetApiController extends Controller
          
         $pets = Pet::with('fotos')->get();
         $pets = $pets->map(function ($pets){
-          $pets->fotos[0]->imagem = asset("storage/".$pets->fotos[0]->imagem);
+          $pets->fotos[0]->imagem = "http://10.56.46.30/projeto_petMatch/public/storage/".$pets->fotos[0]->imagem;
           return $pets;
         });
         

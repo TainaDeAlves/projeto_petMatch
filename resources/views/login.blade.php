@@ -31,11 +31,11 @@
                 
 
             </div>
-            <a href="{{route("home")}}" class="gin">Entrar</a>
+            <a href="{{route('home')}}" class="gin">Entrar</a>
         </div>
 
 
 @include('includes.rodape')
     </main>
 
-    <script src="{{asset('./js/main.js"')}}></script>
+    <script src="{{asset('./js/main.js')}}"></script>

@@ -83,23 +83,25 @@ class PetsController extends Controller
     /**
      * Exibe os detalhes de um pet específico.
      */
-    public function show(Pet $pet)
+    public function show(Pet $pet, $id)
     {
+        $pet = Pet::findOrFail($id);
         return view('admin.pets.visualizar', compact('pet'));
     }
 
     /**
      * Exibe o formulário para editar um pet.
      */
-    public function edit(Pet $pet)
+    public function edit(Pet $pet, $id)
     {
+        $pet = Pet::findOrFail($id);
         return view('admin.pets.editar', compact('pet'));
     }
 
     /**
      * Atualiza os dados de um pet no banco de dados.
      */
-    public function update(Request $request, Pet $pet)
+    public function update(Request $request, Pet $id)
     {
         // Validação dos dados do pet
         $validated = $request->validate([
@@ -129,12 +131,17 @@ class PetsController extends Controller
     
         // Atualiza o pet com os dados validados
         $pet->update($validated);
+
+        $pet = Pet::findOrFail($id);
+
+        $pet->update([
+            'nome_doador' => $request->nome_doador,
+           
+        ]);
     
        
         if ($request->hasFile('fotos')) {
-        
-       
-            
+             
             foreach ($request->file('fotos') as $file) {
                
                 $caminhoFoto = $file->store('fotos','public');
@@ -152,8 +159,9 @@ class PetsController extends Controller
     /**
      * Remove um pet do banco de dados.
      */
-    public function destroy(Pet $pet)
+    public function destroy(Pet $pet, $id)
     {
+        
         $pet->delete();
 
         return redirect()->route('admin.pets.index')->with('success', 'Pet excluído com sucesso!');
